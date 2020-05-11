@@ -10,6 +10,7 @@ public class punch_right : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        origin = transform.position;
         r = GetComponent<Rigidbody>();
         target_box = new Vector3(2.4f, 0.76f, 0.31f);
     }
@@ -20,7 +21,7 @@ public class punch_right : MonoBehaviour
         target_box = new Vector3(2.4f, 0.76f, 0.31f);
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            origin = transform.position;
+          
             transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
         }
         if (Input.GetKeyUp(KeyCode.RightArrow))

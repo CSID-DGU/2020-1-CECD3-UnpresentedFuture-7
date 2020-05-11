@@ -11,6 +11,8 @@ public class punch_left : MonoBehaviour
     void Start()
     {
         r = GetComponent<Rigidbody>();
+        origin = transform.position;
+
         target_box = new Vector3(2.4f, 0.76f, 0.31f);
     }
 
@@ -20,8 +22,7 @@ public class punch_left : MonoBehaviour
         target_box = new Vector3(2.4f, 0.76f, 0.31f);
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            origin = transform.position;
-            transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
+              transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
