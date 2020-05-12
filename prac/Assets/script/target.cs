@@ -31,14 +31,16 @@ public class target : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        controller.score++;
-        Debug.Log("a: " + controller.score);
-        if (collision.gameObject.tag=="target")
+        if (collision.gameObject.tag=="hand")
         { this.gameObject.SetActive(false);
+
+            controller.score++;
+
+            Debug.Log("a: " + controller.score);
             Invoke("f",2f);
-           
+            Debug.Log("colli : " + collision.gameObject.tag);
         }
-        Debug.Log("colli : " + collision.gameObject.name);
+       
     }
     private void f()
     {
