@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="scheduler" size="0.124883 0.235743" />
+    <ImageTarget name="bo2" size="0.174095 0.204522" />
+    <ImageTarget name="bo" size="0.190500 0.254000" />
+    <ImageTarget name="roc2" size="0.190500 0.254000" />
+    <ImageTarget name="roc1" size="0.190500 0.254000" />
+    <ImageTarget name="rock" size="0.078581 0.061648" />
+    <ImageTarget name="city" size="0.211666 0.389465" />
+    <ImageTarget name="logo" size="0.158750 0.049477" />
+  </Tracking>
+</QCARConfig>
