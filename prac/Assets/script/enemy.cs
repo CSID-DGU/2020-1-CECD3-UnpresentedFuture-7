@@ -25,12 +25,17 @@ public class enemy : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+<<<<<<< HEAD
         if (collision.gameObject.name == "player")
         {
             mat.color = new Color(0, 0, 0);
             
 
         }
+=======
+        //if ()
+        mat.color = new Color(0, 0, 0);
+>>>>>>> 522e290201a7df1c492f0374504dac156bd96ad3
     }
 
     void changemove()

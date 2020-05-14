@@ -31,6 +31,11 @@ public class target : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+<<<<<<< HEAD
+=======
+        GetComponent<Speed>().speed.y -= 10;
+        GetComponent<Speed>().acceleration.y+=10;
+>>>>>>> 522e290201a7df1c492f0374504dac156bd96ad3
         if (collision.gameObject.tag=="hand")
         { this.gameObject.SetActive(false);
 
