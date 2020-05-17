@@ -60,6 +60,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\asset\Mesh Explosion\Demo\ClickOrTapToExplode.cs" />
+    <Compile Include="Assets\asset\Mesh Explosion\Demo\ReloadScene.cs" />
+    <Compile Include="Assets\asset\Mesh Explosion\Internal\DestroyAfterTime.cs" />
+    <Compile Include="Assets\asset\Mesh Explosion\Internal\DestroyOnFadeCompletion.cs" />
+    <Compile Include="Assets\asset\Mesh Explosion\Internal\Fade.cs" />
+    <Compile Include="Assets\asset\Mesh Explosion\Internal\MeshExplosion.cs" />
+    <Compile Include="Assets\asset\Mesh Explosion\MeshExploder.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\ProjectionPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Arm.cs" />
@@ -263,6 +270,7 @@
     <None Include="Assets\LeapMotion\Core\Shaders\PassthroughBackground.shader" />
     <None Include="Assets\LeapMotion\Core\Version.txt" />
     <None Include="Assets\LeapMotion\Core\Shaders\VertexOffsetShader.shader" />
+    <None Include="Assets\asset\Mesh Explosion\Read Me.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/bohee/Desktop/jongsul/repos/prac/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

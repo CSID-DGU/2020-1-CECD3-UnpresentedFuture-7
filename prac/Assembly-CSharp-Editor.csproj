@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\asset\Mesh Explosion\Editor\MeshExploderEditor.cs" />
     <Compile Include="Assets\LeapMotion\Core\Editor\CorePreferences.cs" />
     <Compile Include="Assets\LeapMotion\Core\Editor\CustomEditorBase.cs" />
     <Compile Include="Assets\LeapMotion\Core\Editor\CustomPropertyDrawerBase.cs" />
