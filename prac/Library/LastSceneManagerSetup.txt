@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/punch.unity
+- path: Assets/Scenes/Start_Scene_YGC.unity
   isLoaded: 1
   isActive: 1
