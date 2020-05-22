@@ -31,9 +31,12 @@ public class target : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        //=Vector3.Dot(); // 내적   // 주먹쥐었니???
+        //GetComponent<MeshRenderer>().enabled = false;
         if (collision.gameObject.tag=="hand")
-        {// this.gameObject.SetActive(false);
-
+        {
+            
+            
             controller.score++;
             //  GetComponent<Speed>().speed = collision.gameObject.GetComponent<FistSpeed>().CurrentSpeed;
 
@@ -47,6 +50,7 @@ public class target : MonoBehaviour
             */
             GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
             //  Instantiate<GameObject>(AfterEffect,transform,true); // 폭발 하는거 
+            this.gameObject.SetActive(false);
 
             Debug.Log("score: " + controller.score);
             Invoke("f", 2f);
