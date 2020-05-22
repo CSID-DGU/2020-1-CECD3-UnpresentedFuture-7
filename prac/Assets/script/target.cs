@@ -10,9 +10,12 @@ public class target : MonoBehaviour
    // public controller ct;
     Vector3 target_b;
     Vector3 original_p;
+    int target_speed;
     // Start is called before the first frame update
     void Start()
     {
+      
+        
         r = GetComponent<Rigidbody>();
         target_b = (box.position + box2.position) / 2;
         original_p = transform.position;
@@ -64,5 +67,17 @@ public class target : MonoBehaviour
         this.transform.position = original_p;
         this.gameObject.SetActive(true);
         transform.position = Vector3.MoveTowards(transform.position, target_b, 0.1f);
+    }
+    private void OnEnable()
+    {
+        target_b = (box.position + box2.position) / 2;
+        transform.position = Vector3.MoveTowards(transform.position, target_b, 0.1f);
+
+    }
+    private void OnDisable()
+    {
+        //original_p = original_p * Random.Range(0.5f, 1f);
+        original_p =new Vector3(original_p.x * Random.Range(0.8f, 1.1f), original_p.y * Random.Range(0f, 2f), original_p.z * Random.Range(0f, 2f));
+        r.velocity = new Vector3(0, 0, 0);
     }
 }
