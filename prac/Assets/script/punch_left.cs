@@ -29,6 +29,18 @@ public class punch_left : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
 
         }
-   
+
     }
+    public void leftdown()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
+
+    }
+    public void leftup()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
+
+    }
+
+
 }
