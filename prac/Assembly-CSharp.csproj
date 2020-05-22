@@ -259,6 +259,7 @@
     <Compile Include="Assets\script\player_move.cs" />
     <Compile Include="Assets\script\punch_left.cs" />
     <Compile Include="Assets\script\punch_right.cs" />
+    <Compile Include="Assets\script\StartSceneScript\StartSceneManager.cs" />
     <Compile Include="Assets\script\target.cs" />
     <None Include="Assets\LeapMotion\Core\Resources\LeapCG.cginc" />
     <None Include="Assets\LeapMotion\Core\README_BEFORE_UPDATING.txt" />
