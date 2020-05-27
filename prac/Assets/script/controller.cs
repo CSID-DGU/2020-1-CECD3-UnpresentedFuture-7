@@ -6,13 +6,14 @@ public class controller : MonoBehaviour
 {
 
     public static int score=0;
+    Vector3 original_p;
 
     public GameObject firstprefab;
     // Start is called before the first frame update
     void Start()
     {
-
-        Invoke("continueing", 2);
+        original_p = new Vector3(-15f,-3f,-5f);
+        Invoke("continueing", 1);
     }
     void Update()
     {
@@ -20,16 +21,13 @@ public class controller : MonoBehaviour
 
     private void rout()
     {
-        while (true)
-        {
-            
-        }
+
     }
     private void continueing()
     {
-        Instantiate(firstprefab, new Vector3(-20,-3,-5), Quaternion.identity);
+        Instantiate(firstprefab, new Vector3(original_p.x*Random.Range(-3f,3f),original_p.y*Random.Range(-5f,5f),original_p.z*Random.Range(-5f,5f)), Quaternion.identity);
 
-        Invoke("continueing", 2);
+        Invoke("continueing", 1);
     }
 
     // Update is called once per frame

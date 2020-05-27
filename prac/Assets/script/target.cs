@@ -18,9 +18,10 @@ public class target : MonoBehaviour
 
         //firstprefab = GetComponent<GameObject>();
         r = GetComponent<Rigidbody>();
-        target_b = (box.position + box2.position) / 2;
+        //arget_b = (box.position + box2.position) / 2;
+        target_b= new Vector3(5f, 0.6f, -0.3f);
         original_p = transform.position;
-        
+       // original_p = new Vector3(5f, 0.6f, -0.3f);
     }
 
     // Update is called once per frame
@@ -30,8 +31,8 @@ public class target : MonoBehaviour
         if (transform.position == target_b)
         {
             GetComponent<MeshExploder>().Explode(); this.gameObject.SetActive(false);
-            Invoke("f", 2f); 
-
+            //  Invoke("f", 2f); 
+            Destroy(this.gameObject);
         }
 
     }
@@ -50,10 +51,11 @@ public class target : MonoBehaviour
             }
             */
             GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
-            //  Instantiate<GameObject>(AfterEffect,transform,true); // 폭발 하는거 
-            this.gameObject.SetActive(false);
+                                                   //  Instantiate<GameObject>(AfterEffect,transform,true); // 폭발 하는거 
+                                                   //  this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
             Debug.Log("score: " + controller.score);
-            Invoke("f", 2f);
+         //   Invoke("f", 2f);
             Debug.Log("colli : " + collision.gameObject.tag);
         }
        
@@ -69,16 +71,16 @@ public class target : MonoBehaviour
     private void OnDisable()
     {
         //original_p = original_p * Random.Range(0.5f, 1f);
-        original_p = new Vector3(original_p.x * Random.Range(0.8f, 1.1f), original_p.y * Random.Range(0f, 2f), original_p.z * Random.Range(0f, 2f));
-        r.velocity = new Vector3(0, 0, 0);
-        r.ResetInertiaTensor();
+      //  original_p = new Vector3(original_p.x * Random.Range(0.8f, 1.1f), original_p.y * Random.Range(0f, 2f), original_p.z * Random.Range(0f, 2f));
+      //  r.velocity = new Vector3(0, 0, 0);
+    //    r.ResetInertiaTensor();
         
     }
     private void OnEnable()
     {
         
-        target_b = (box.position + box2.position) / 2;
-        transform.position = Vector3.MoveTowards(transform.position, target_b, 0.1f);
+     //   target_b = (box.position + box2.position) / 2;
+     //   transform.position = Vector3.MoveTowards(transform.position, target_b, 0.1f);
 
     }
 
