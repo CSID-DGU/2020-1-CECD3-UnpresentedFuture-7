@@ -12,13 +12,14 @@ public class punch_right : MonoBehaviour
     {
         origin = transform.position;
         r = GetComponent<Rigidbody>();
-        target_box = new Vector3(2.4f, 0.76f, 0.31f);
+
+        target_box = new Vector3(1.0f, 5.0f, 2.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        target_box = new Vector3(2.4f, 0.76f, 0.31f);
+        // 오른쪽 키를 누르면 목표한 위치로 Sphere_right 객체 이동
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
           
@@ -27,20 +28,6 @@ public class punch_right : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.RightArrow))
         {
             transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
-
         }
-
     }
-
-    public void rightdown()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
-
-    }
-    public void rightup()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
-
-    }
-
 }
