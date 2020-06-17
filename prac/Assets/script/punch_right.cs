@@ -31,4 +31,16 @@ public class punch_right : MonoBehaviour
         }
 
     }
+
+    public void rightdown()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
+
+    }
+    public void rightup()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
+
+    }
+
 }
