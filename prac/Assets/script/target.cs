@@ -29,7 +29,7 @@ public class target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position,target_b , 0.1f);
+        transform.position = Vector3.MoveTowards(transform.position,target_b , 10.0f*Time.deltaTime);
         if (transform.position == target_b)
         {
             GetComponent<MeshExploder>().Explode(); this.gameObject.SetActive(false);
