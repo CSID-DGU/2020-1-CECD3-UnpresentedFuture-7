@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class controller : MonoBehaviour
 {
-
+    
+    public Text score_text;
     public static int score=0;
     Vector3 original_p;
 
@@ -31,5 +33,6 @@ public class controller : MonoBehaviour
     }
 
     // Update is called once per frame
-  
+ 
+
 }

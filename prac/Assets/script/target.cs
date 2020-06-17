@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class target : MonoBehaviour
 {
     Rigidbody r;
-    public Transform box;
-    public Transform box2;
-  //  public GameObject firstprefab;
-   // public controller ct;
+    //public Transform box;
+    //public Transform box2;
+        
+    //  public GameObject firstprefab;
+    // public controller ct;
     Vector3 target_b;
     Vector3 original_p;
     int target_speed;
     // Start is called before the first frame update
     void Start()
     {
-
         //firstprefab = GetComponent<GameObject>();
         r = GetComponent<Rigidbody>();
         //arget_b = (box.position + box2.position) / 2;
@@ -43,14 +45,16 @@ public class target : MonoBehaviour
         if (collision.gameObject.tag=="hand")
         {
             controller.score++;
-            //  GetComponent<Speed>().speed = collision.gameObject.GetComponent<FistSpeed>().CurrentSpeed;
-            // speed라는게 원래 있는 건가 보데..?
-            /*   Vector3 CurrentSpeed=GetComponent<FistSpeed>().CurrentSpeed;// 이런식으로 가져오는 거구나...
-            if (CurrentSpeed.magnitude > 10)
-            {
-            }
-            */
-            GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
+            Debug.Log("score: "+controller.score);
+
+    //  GetComponent<Speed>().speed = collision.gameObject.GetComponent<FistSpeed>().CurrentSpeed;
+    // speed라는게 원래 있는 건가 보데..?
+    /*   Vector3 CurrentSpeed=GetComponent<FistSpeed>().CurrentSpeed;// 이런식으로 가져오는 거구나...
+    if (CurrentSpeed.magnitude > 10)
+    {
+    }
+    */
+    GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
                                                    //  Instantiate<GameObject>(AfterEffect,transform,true); // 폭발 하는거 
                                                    //  this.gameObject.SetActive(false);
             Destroy(this.gameObject);
@@ -60,6 +64,7 @@ public class target : MonoBehaviour
         }
        
     }
+
 
     private void f()
     {
