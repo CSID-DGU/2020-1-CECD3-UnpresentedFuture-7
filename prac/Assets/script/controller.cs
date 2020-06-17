@@ -7,33 +7,69 @@ public class controller : MonoBehaviour
 {
 
     public Text score_text;         // 점수 텍스트 객체
-    public static int score = 0;    // 게임 점수
+    public static int score=0;      // 게임 점수
+
+    public Text timeText;
+    private float time=0;
+
     public GameObject firstprefab;  // 타격 오브젝트
-    private Vector3 original_p;     // 타격 오브젝트 위치
+    Vector3 original_p;             // 타격 오브젝트 위치
     public float delaytime;         // 타격 오브젝트 생성 속도
+
+    public Canvas menu;
+    private bool isopen=false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        original_p = new Vector3(0.0f, 5.0f, 30.0f);     // 처음 타격 오브젝트의 위치
-        StartCoroutine(continueing());              // 타격 오브젝트를 delaytime마다 생성
-        delaytime = 2.0f;
+        time = 15f;
+        original_p = new Vector3(-15f,-3f,-5f);
+        Invoke("continueing", 1);
     }
     void Update()
     {
-        score_text.text = "score : " + score;       // 점수 갱신
+        time -= Time.deltaTime;
+        if (time < 0)
+        {
+
+            Time.timeScale = 0;
+        }
+      //  Debug.Log("heart : " + time);
+        timeText.text = Mathf.Ceil(time).ToString();
+        if (Input.GetKeyDown("escape"))
+        {
+            isopen = !isopen;
+            if (isopen)
+            {
+                Time.timeScale = 0.001f;
+                menu.enabled = true;
+                //Instantiate(menu);
+            }
+            else
+            {
+
+                menu.enabled = false;
+                Time.timeScale = 1f;
+
+            }
+
+
+        }
+    
+
+
     }
 
-    IEnumerator continueing()
+  
+    private void continueing()
     {
-        while (true)
-        {
-            // 랜덤한 위치에 따라 타격 오브젝트 생성
-            Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
-                                                original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
-                                                Quaternion.identity);
-            yield return new WaitForSeconds(delaytime);
-        }
+        Instantiate(firstprefab, new Vector3(original_p.x*Random.Range(-3f,3f),original_p.y*Random.Range(-5f,5f),original_p.z*Random.Range(-5f,5f)), Quaternion.identity);
+
+        Invoke("continueing", 1);
     }
+
+    // Update is called once per frame
+ 
+
 }
