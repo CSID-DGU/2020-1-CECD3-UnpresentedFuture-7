@@ -259,7 +259,6 @@
     <Compile Include="Assets\script\player_move.cs" />
     <Compile Include="Assets\script\punch_left.cs" />
     <Compile Include="Assets\script\punch_right.cs" />
-    <Compile Include="Assets\script\StartSceneScript\StartSceneManager.cs" />
     <Compile Include="Assets\script\target.cs" />
     <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
