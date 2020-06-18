@@ -9,7 +9,7 @@ public class controller : MonoBehaviour
     public Text score_text;
     public static int score = 0;
     public Text timeText;
-    private float time = 0;
+    public static float time = 0;// 0618 성두 static
     public GameObject firstprefab;
     Vector3 original_p;
     public Canvas menu;
@@ -21,7 +21,7 @@ public class controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        time = 15f;
+        time = 60f;
         original_p = new Vector3(0.0f, 5.0f, 10f);
         StartCoroutine(continueing());
         delayTime = 2.0f;
