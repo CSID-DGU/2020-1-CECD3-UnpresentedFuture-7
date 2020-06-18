@@ -7,33 +7,34 @@ public class controller : MonoBehaviour
 {
 
     public Text score_text;
+    public static int score = 0;
     public Text timeText;
-
-    public static int score=0;
-    Vector3 original_p;
-    private float time=0;
-
+    private float time = 0;
     public GameObject firstprefab;
+    Vector3 original_p;
     public Canvas menu;
-    private bool isopen=false;
+    private bool isopen = false;
+
+    public float delayTime;
 
 
     // Start is called before the first frame update
     void Start()
     {
         time = 15f;
-        original_p = new Vector3(-15f,-3f,-5f);
-        Invoke("continueing", 1);
+        original_p = new Vector3(0.0f, 5.0f, 10f);
+        StartCoroutine(continueing());
+        delayTime = 2.0f;
+
     }
     void Update()
     {
         time -= Time.deltaTime;
         if (time < 0)
         {
-
             Time.timeScale = 0;
         }
-      //  Debug.Log("heart : " + time);
+        //  Debug.Log("heart : " + time);
         timeText.text = Mathf.Ceil(time).ToString();
         if (Input.GetKeyDown("escape"))
         {
@@ -46,28 +47,25 @@ public class controller : MonoBehaviour
             }
             else
             {
-
                 menu.enabled = false;
                 Time.timeScale = 1f;
-
             }
-
-
         }
-    
 
-
+        score_text.text = "score : " + score;   // 점수 갱신
     }
 
-  
-    private void continueing()
+
+    IEnumerator continueing()
     {
-        Instantiate(firstprefab, new Vector3(original_p.x*Random.Range(-3f,3f),original_p.y*Random.Range(-5f,5f),original_p.z*Random.Range(-5f,5f)), Quaternion.identity);
-
-        Invoke("continueing", 1);
+        while (true)
+        {
+            // 랜덤한 위치에 따라 타격 오브젝트 생성
+            Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+                                                original_p.y + Random.Range(-5f, 5f),
+                                                original_p.z + Random.Range(-10f, 10f)),
+                                                Quaternion.identity);
+            yield return new WaitForSeconds(delayTime);
+        }
     }
-
-    // Update is called once per frame
- 
-
 }
