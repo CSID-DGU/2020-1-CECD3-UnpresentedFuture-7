@@ -29,4 +29,8 @@ public class punch_left : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4e70962f62051da42bf81dd1c3a50353552cd376

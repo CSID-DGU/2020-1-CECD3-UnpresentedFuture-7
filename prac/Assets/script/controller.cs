@@ -6,12 +6,25 @@ using UnityEngine.UI;
 public class controller : MonoBehaviour
 {
 
+<<<<<<< HEAD
     public Text score_text;
     public static int score = 0;
     public Text timeText;
     private float time = 0;
     public GameObject firstprefab;
     Vector3 original_p;
+=======
+    public Text score_text;         // 점수 텍스트 객체
+    public static int score=0;      // 게임 점수
+
+    public Text timeText;
+    private float time=0;
+
+    public GameObject firstprefab;  // 타격 오브젝트
+    Vector3 original_p;             // 타격 오브젝트 위치
+    public float delaytime;         // 타격 오브젝트 생성 속도
+
+>>>>>>> 4e70962f62051da42bf81dd1c3a50353552cd376
     public Canvas menu;
     private bool isopen = false;
 
