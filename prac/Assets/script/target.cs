@@ -94,7 +94,11 @@ public class target : MonoBehaviour
             {
                 controller.time += maxhp;
                 controller.score+=maxhp;
-                GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
+
+              
+                    controller.level = controller.score / 5;
+                
+                    GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
                 this.gameObject.SetActive(false);
                 Destroy(this.gameObject);
             }

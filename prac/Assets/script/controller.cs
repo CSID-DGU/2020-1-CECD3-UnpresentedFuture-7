@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class controller : MonoBehaviour
 {
 
     public Text score_text;
+    public Text level_text;
+    public static int level = 1;
     public static int score = 0;
     public Text timeText;
     public static float time = 0;// 0618 성두 static
@@ -53,8 +56,13 @@ public class controller : MonoBehaviour
         }
 
         score_text.text = "score : " + score;   // 점수 갱신
+        level_text.text = "level : " + level;   // 점수 갱신
     }
-
+    public  void  reStart()
+    {
+        Debug.Log("why not react...");
+        SceneManager.LoadScene("punch");
+    }
 
     IEnumerator continueing()
     {
