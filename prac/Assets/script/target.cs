@@ -9,6 +9,7 @@ public class target : MonoBehaviour
     Rigidbody r;
     Vector3 target_b;
     Vector3 original_p;
+    GameObject targettmp;//-----------------------------------------------------------------0618 성두
     int hp;//-----------------------------------------------------------------0618 성두
     int maxhp;//-----------------------------------------------------------------0618 성두
     int target_speed;
@@ -16,7 +17,7 @@ public class target : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        renderer= gameObject.GetComponent<Renderer>();
+        renderer = gameObject.GetComponent<Renderer>();
         hp = (int)Random.Range(1f, 7f);//-----------------------------------------------------------------0618 성두
         maxhp = hp;
         switch (hp)
@@ -44,12 +45,16 @@ public class target : MonoBehaviour
         }
         r = GetComponent<Rigidbody>();
         target_b = new Vector3(0.0f, 5.0f, 0.1f);
+
         original_p = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+      //  targettmp = GameObject.FindGameObjectWithTag("target");
+    //    target_b = targettmp.transform.position;
+
         // 타격 오브젝트 이동
         transform.position = Vector3.MoveTowards(transform.position, target_b, 10.0f * Time.deltaTime);
         // 지정된 위치에 타격 오브젝트 도착시 객체 소멸
@@ -96,7 +101,7 @@ public class target : MonoBehaviour
                 controller.score+=maxhp;
 
               
-                    controller.level = controller.score / 5;
+                    controller.level = (controller.score / 5) +1;
                 
                     GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
                 this.gameObject.SetActive(false);
