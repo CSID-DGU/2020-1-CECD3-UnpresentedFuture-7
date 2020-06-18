@@ -68,4 +68,3 @@ public class controller : MonoBehaviour
             yield return new WaitForSeconds(delayTime);
         }
     }
-}
