@@ -9,23 +9,22 @@ public class target : MonoBehaviour
     Rigidbody r;
     Vector3 target_b;
     Vector3 original_p;
-    GameObject targettmp;//-----------------------------------------------------------------0618 성두
-    int hp;//-----------------------------------------------------------------0618 성두
-    int maxhp;//-----------------------------------------------------------------0618 성두
+    GameObject targettmp;//---------------------------------------0618 성두
+    int hp;//-----------------------------------------------------0618 성두
+    int maxhp;//--------------------------------------------------0618 성두
     int target_speed;
     Renderer renderer;
     // Start is called before the first frame update
     void Start()
     {
         renderer = gameObject.GetComponent<Renderer>();
-        hp = (int)Random.Range(1f, 7f);//-----------------------------------------------------------------0618 성두
+        hp = (int)Random.Range(1f, 7f);//-------------------------0618 성두
         maxhp = hp;
         switch (hp)
         {
             case 1:
                 renderer.material.color = Color.white;
                 break;
-
             case 2:
                 renderer.material.color = Color.red;
                 break;

@@ -33,5 +33,19 @@ public class punch_right : MonoBehaviour
             // transform.position = origin;
         }
     }
+
+    public void PointerDown()
+    // 포인터가 다운될 떄 호출된다. 
+    // 즉, 이 스크립트가 버튼에 들어 있다면 버튼이 눌리는 순간 한번 호출되는 함수
+    // eventData에는 PointerEventData형이 콜백되는데 유용하게 사용되니 살펴보는 것을 추천한다.
+    {
+        transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
+    }
+
+    public void PointerUp()
+    // 포인터가 Up될 때 호출된다. 버튼이라면 버튼이 올라오는 순간 한번 호출되는 함수
+    {
+        transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
+    }
 }
 
