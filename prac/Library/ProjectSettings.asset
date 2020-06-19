@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: com
+  companyName: com.a.b
   productName: a
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -52,7 +52,7 @@ PlayerSettings:
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
-  displayResolutionDialog: 1
+  displayResolutionDialog: 2
   iosUseCustomAppBackgroundBehavior: 0
   iosAllowHTTPDownload: 1
   allowedAutorotateToPortrait: 1
@@ -393,9 +393,9 @@ PlayerSettings:
     - OpenVR
   m_BuildTargetEnableVuforiaSettings:
   - m_BuildTarget: Android
-    m_Enabled: 1
+    m_Enabled: 0
   - m_BuildTarget: Standalone
-    m_Enabled: 1
+    m_Enabled: 0
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   m_TemplateCustomTags: {}
