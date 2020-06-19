@@ -13,34 +13,25 @@ public class punch_left : MonoBehaviour
         r = GetComponent<Rigidbody>();
         origin = transform.position;
 
-        target_box = new Vector3(2.4f, 0.76f, 0.31f);
+        target_box = new Vector3(-1.0f, 5.0f, 2.0f);
+
+        //target_box = new Vector3(origin.x + 0.0001f, origin.y, origin.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        target_box = new Vector3(2.4f, 0.76f, 0.31f);
+        // 왼쪽 키를 누르면 목표한 위치로 Sphere_left 객체 이동
+        // 왼쪽 키를 누르면 목표한 위치로 Sphere_left 객체 이동
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-              transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
+            // transform.position = target_box;
+            transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
-
+            // transform.position = origin;
         }
-
     }
-    public void leftdown()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, target_box, 3f);
-
-    }
-    public void leftup()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, origin, 3f);
-
-    }
-
-
 }

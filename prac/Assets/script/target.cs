@@ -7,86 +7,108 @@ using UnityEngine.UI;
 public class target : MonoBehaviour
 {
     Rigidbody r;
-    //public Transform box;
-    //public Transform box2;
-        
-    //  public GameObject firstprefab;
-    // public controller ct;
     Vector3 target_b;
     Vector3 original_p;
+    GameObject targettmp;//-----------------------------------------------------------------0618 성두
+    int hp;//-----------------------------------------------------------------0618 성두
+    int maxhp;//-----------------------------------------------------------------0618 성두
     int target_speed;
+    Renderer renderer;
     // Start is called before the first frame update
     void Start()
     {
-        //firstprefab = GetComponent<GameObject>();
+        renderer = gameObject.GetComponent<Renderer>();
+        hp = (int)Random.Range(1f, 7f);//-----------------------------------------------------------------0618 성두
+        maxhp = hp;
+        switch (hp)
+        {
+            case 1:
+                renderer.material.color = Color.white;
+                break;
+
+            case 2:
+                renderer.material.color = Color.red;
+                break;
+            case 3:
+                renderer.material.color = Color.cyan;
+                break;
+            case 4:
+                renderer.material.color = Color.green;
+                break;
+            case 5:
+                renderer.material.color = Color.blue;
+                break;
+         
+            default:
+                renderer.material.color = Color.black;
+                break;
+        }
         r = GetComponent<Rigidbody>();
-        //arget_b = (box.position + box2.position) / 2;
-        target_b= new Vector3(5f, 0.6f, -0.3f);
+        target_b = new Vector3(0.0f, 5.0f, 0.1f);
+
         original_p = transform.position;
-       // original_p = new Vector3(5f, 0.6f, -0.3f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position,target_b , 0.1f);
+      //  targettmp = GameObject.FindGameObjectWithTag("target");
+    //    target_b = targettmp.transform.position;
+
+        // 타격 오브젝트 이동
+        transform.position = Vector3.MoveTowards(transform.position, target_b, 10.0f * Time.deltaTime);
+        // 지정된 위치에 타격 오브젝트 도착시 객체 소멸
         if (transform.position == target_b)
         {
-            GetComponent<MeshExploder>().Explode(); this.gameObject.SetActive(false);
-            //  Invoke("f", 2f); 
+            this.gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
 
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //=Vector3.Dot(); // 내적   // 주먹쥐었니???
-        //GetComponent<MeshRenderer>().enabled = false;
-        if (collision.gameObject.tag=="hand")
+        // Hand 객체와 충돌 시 타격 오브젝트 파괴
+        if (collision.gameObject.tag == "hand")
         {
-            controller.score++;
-            Debug.Log("score: "+controller.score);
+            hp -= 1;//-----------------------------------------------------------------0618 성두
+            switch (hp)
+            {
+                case 1:
+                    renderer.material.color = Color.white;
+                    break;
 
-    //  GetComponent<Speed>().speed = collision.gameObject.GetComponent<FistSpeed>().CurrentSpeed;
-    // speed라는게 원래 있는 건가 보데..?
-    /*   Vector3 CurrentSpeed=GetComponent<FistSpeed>().CurrentSpeed;// 이런식으로 가져오는 거구나...
-    if (CurrentSpeed.magnitude > 10)
-    {
-    }
-    */
-    GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
-                                                   //  Instantiate<GameObject>(AfterEffect,transform,true); // 폭발 하는거 
-                                                   //  this.gameObject.SetActive(false);
-            Destroy(this.gameObject);
-            Debug.Log("score: " + controller.score);
-         //   Invoke("f", 2f);
-            Debug.Log("colli : " + collision.gameObject.tag);
+                case 2:
+                    renderer.material.color = Color.red;
+                    break;
+                case 3:
+                    renderer.material.color = Color.cyan;
+                    break;
+                case 4:
+                    renderer.material.color = Color.green;
+                    break;
+                case 5:
+                    renderer.material.color = Color.blue;
+                    break;
+
+                default:
+                    renderer.material.color = Color.black;
+                    break;
+            }
+
+            if (hp <= 0)//-----------------------------------------------------------------0618 성두
+            {
+                controller.time += maxhp;
+                controller.score+=maxhp;
+
+              
+                    controller.level = (controller.score / 5) +1;
+                
+                    GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
+                this.gameObject.SetActive(false);
+                Destroy(this.gameObject);
+            }
+
+            Debug.Log("collision : " + collision.gameObject.tag);
         }
-       
     }
-
-
-    private void f()
-    {
-        
-        this.transform.position = original_p;
-        this.gameObject.SetActive(true);
-        transform.position = Vector3.MoveTowards(transform.position, target_b, 0.1f);
-    }
-    private void OnDisable()
-    {
-        //original_p = original_p * Random.Range(0.5f, 1f);
-      //  original_p = new Vector3(original_p.x * Random.Range(0.8f, 1.1f), original_p.y * Random.Range(0f, 2f), original_p.z * Random.Range(0f, 2f));
-      //  r.velocity = new Vector3(0, 0, 0);
-    //    r.ResetInertiaTensor();
-        
-    }
-    private void OnEnable()
-    {
-        
-     //   target_b = (box.position + box2.position) / 2;
-     //   transform.position = Vector3.MoveTowards(transform.position, target_b, 0.1f);
-
-    }
-
 }
