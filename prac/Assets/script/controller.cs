@@ -58,6 +58,9 @@ public class controller : MonoBehaviour
         heart_text.text = "heart : " + Mathf.Ceil(time).ToString(); //라이프 갱신
     }
     
+
+  
+
     IEnumerator continueing()
     {
         while (true)
