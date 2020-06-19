@@ -1,4 +1,49 @@
-Base path: C:/Download/Unity Hub/Editor/2018.4.22f1/Editor/Data
+Base path: C:/Program Files/Unity/2018.4.22f1/Editor/Data
+Cmd: initializeCompiler
+<<<<<<< HEAD
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+<<<<<<< HEAD
+Cmd: preprocess
+  insize=842 outsize=842 ok=1
+Cmd: preprocess
+  insize=2345 outsize=898 ok=1
+Cmd: preprocess
+  insize=1558 outsize=1558 ok=1
+=======
 Cmd: initializeCompiler
+>>>>>>> 0e57eea772ef159490b64b0a9c86dde7427c4d1a
+Cmd: preprocess
+  insize=2076 outsize=807 ok=1
+Cmd: preprocess
+  insize=980 outsize=304 ok=1
+Cmd: preprocess
+<<<<<<< HEAD
+  insize=1360 outsize=1360 ok=1
+Cmd: preprocess
+  insize=1197 outsize=498 ok=1
+Cmd: preprocess
+  insize=1219 outsize=1250 ok=1
+=======
+  insize=1175 outsize=1236 ok=1
+>>>>>>> 0e57eea772ef159490b64b0a9c86dde7427c4d1a
+Cmd: preprocess
+  insize=1369 outsize=511 ok=1
+Cmd: preprocess
+<<<<<<< HEAD
+  insize=1913 outsize=1037 ok=1
+Cmd: preprocess
+  insize=880 outsize=261 ok=1
+Cmd: preprocess
+  insize=923 outsize=923 ok=1
+Cmd: preprocess
+  insize=3170 outsize=811 ok=1
+Cmd: preprocess
+  insize=690 outsize=690 ok=1
+Cmd: preprocess
+  insize=1972 outsize=1327 ok=1
+=======
+  insize=839 outsize=248 ok=1
+>>>>>>> 0e57eea772ef159490b64b0a9c86dde7427c4d1a
+>>>>>>> 2693dcc0fed4b95c9fcd6298dbfe229e690d79bf
