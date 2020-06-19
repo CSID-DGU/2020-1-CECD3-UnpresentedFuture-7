@@ -97,7 +97,7 @@ public class target : MonoBehaviour
             if (hp <= 0)//-----------------------------------------------------------------0618 성두
             {
                 controller.time += maxhp;
-                controller.score+=maxhp;
+                controller.score += maxhp;
 
               
                     controller.level = (controller.score / 5) +1;
