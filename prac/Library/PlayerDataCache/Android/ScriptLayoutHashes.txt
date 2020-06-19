@@ -1,10 +1,10 @@
 Android
 PlayerPath?
-C:/Users/bohee/Desktop/testapp.apk
+C:/Users/bohee/Desktop/ttttt.apk
 SceneListBegin?
-Assets/Scenes/Start_Scene_YGC.unity
 Assets/Scenes/punch.unity
 SceneListEnd?
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.BoundingBoxRenderer
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 77c21079ace8d76ce6e941d3dabbfe6e Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 83dad5d3b311cc37500c9a51e45acefd Assembly-CSharp.dll:Leap.Unity.ConnectionMonitor
@@ -61,7 +61,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 d3c76b14a25eebd3a3323dd43297919c Unity.TextMeshPro.dll:TMPro.TMP_InputField
 80f8a50496b357c5d1bb9149cc72d487 Assembly-CSharp.dll:Leap.Unity.Attachments.AttachmentHandEnableDisable
-4901dec25701619ad766ad54e9dcd131 Assembly-CSharp.dll:.target
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.target
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 507174d46dacbc5fe45e28485db5dd1e UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -131,6 +131,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MeshExplosion
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultInitializationErrorHandler
 f029318299c5a94aae63e9bb13edd224 Assembly-CSharp.dll:Leap.Unity.ProximityDetector
 04c29bbd0a0a20e355ef6ef9e76db036 Assembly-CSharp.dll:Leap.Unity.FrameRateControls
 bff9339fd9117975a0f5124b3eb09b2a Assembly-CSharp.dll:.camera
@@ -214,7 +215,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 b7d1817979b42aa3b599ba010575506b Assembly-CSharp.dll:Leap.Unity.RiggedFinger
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Leap.Unity.HandDrop
 78e914a2ecc19d60c0dbd4ee4e7b7470 Assembly-CSharp.dll:Leap.Unity.RigidHand
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.StartSceneManager
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.restartScript
 09d6de3e088391a7cdb0ae4d2cdcfb65 Assembly-CSharp.dll:Leap.Unity.KeyEnableGameObjects
 5d04fe30d4979959b2f1410a0ae8813f Assembly-CSharp.dll:Leap.Unity.LeapEyeDislocator
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
@@ -240,7 +241,8 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-26852307633e21928c889ff3ac976674 Assembly-CSharp.dll:.controller
+f31643dcf94226b580e4e340b5d79bda Assembly-CSharp.dll:.controller
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultTrackableEventHandler
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Leap.Unity.Animation.Internal.TweenRunner
 35a9693c388776aaf487636491a20f11 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e1300922cc039f41ab46a47f4cb05898 Unity.TextMeshPro.dll:TMPro.TMP_Settings
@@ -260,6 +262,7 @@ dcf6e74abf9f541b63b92bee9ab62a49 Assembly-CSharp.dll:Leap.Unity.LeapServiceProvi
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
+dff7a11839abb9fb7222280cf3c0a95a VuforiaScripts.dll:.DefaultModelRecoEventHandler
 af674031a8db313b88d59a4998db6370 Assembly-CSharp.dll:Leap.Unity.Space.LeapCylindricalSpace
 6bec9ca884c100fa2bc14b84d0f4f804 Assembly-CSharp.dll:Leap.Unity.DisconnectionNotice
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ReloadScene
@@ -269,6 +272,7 @@ f48a93fda9690073f3af0684db5ca288 Assembly-CSharp.dll:.MeshExploder
 507174d46dacbc5fe45e28485db5dd1e Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DestroyOnFadeCompletion
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.StartSceneManager
 6c081c46e59d89aa6e2b50b5caaf7b93 Assembly-CSharp.dll:Leap.Unity.ExtendedFingerDetector
 f377af1ab8f6e80ca97d7871feda549b Assembly-CSharp.dll:Leap.Unity.Comment
 54e2ce3989ec345bbf6c7589f78e1616 Assembly-CSharp.dll:Leap.Unity.SkeletalHand
@@ -348,7 +352,3 @@ fe10de86e42ce80dc24cf76ac1c87c2a Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 69167579cf7fcbb2676fc1e675963dcd Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.BoundingBoxRenderer
-71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultInitializationErrorHandler
-71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultTrackableEventHandler
-dff7a11839abb9fb7222280cf3c0a95a VuforiaScripts.dll:.DefaultModelRecoEventHandler
