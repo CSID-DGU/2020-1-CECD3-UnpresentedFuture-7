@@ -26,7 +26,7 @@ public class controller : MonoBehaviour
         time = 60f;
         original_p = new Vector3(0.0f, 5.0f, 10f);
         StartCoroutine(continueing());
-        delayTime = 2.0f;
+        delayTime = 3.0f;
 
     }
     void Update()
@@ -52,6 +52,7 @@ public class controller : MonoBehaviour
                 Time.timeScale = 1f;
             }
         }
+        
 
         score_text.text = "score : " + score;   // 점수 갱신
         level_text.text = "level : " + level;   // 점수 갱신
@@ -70,7 +71,11 @@ public class controller : MonoBehaviour
                                                 original_p.y + Random.Range(-5f, 5f),
                                                 original_p.z + Random.Range(-10f, 10f)),
                                                 Quaternion.identity);
-            yield return new WaitForSeconds(delayTime);
+            float delay=delayTime/level;
+            if(delay<0.8f)
+            delay=0.8f;
+
+            yield return new WaitForSeconds(delay);
         }
     }
 }

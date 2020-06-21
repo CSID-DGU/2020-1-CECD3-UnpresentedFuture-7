@@ -16,16 +16,25 @@ public class menuButton : MonoBehaviour
     {
         
     }
+    public void goto_start_scene(){
+        
+        SceneManager.LoadScene("Start_Scene_YGC");
+    }
     public void levelup_bt(){
+        controller.score+=5;
         controller.level++;
     }
     public void leveldown_bt(){
+         controller.score-=5;
         controller.level--;
     }
 
     public  void  reStart()
     {   Time.timeScale = 1f;
         Debug.Log("why not react...");
+        controller.score=0;
+        controller.level=1;
+
         SceneManager.LoadScene("punch");
     }
 }

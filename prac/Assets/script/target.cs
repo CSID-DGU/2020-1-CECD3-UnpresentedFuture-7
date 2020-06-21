@@ -10,15 +10,18 @@ public class target : MonoBehaviour
     Vector3 target_b;
     Vector3 original_p;
     GameObject targettmp;//---------------------------------------0618 성두
-    int hp;//-----------------------------------------------------0618 성두
-    int maxhp;//--------------------------------------------------0618 성두
-    int target_speed;
+    int hp;
+    int maxhp;
+    float target_speed;
     Renderer renderer;
     // Start is called before the first frame update
     void Start()
     {
+        
+        target_speed=10f*(1+((float)controller.level/20f));
+
         renderer = gameObject.GetComponent<Renderer>();
-        hp = (int)Random.Range(1f, 7f);//-------------------------0618 성두
+        hp = (int)Random.Range(1f, 4f);
         maxhp = hp;
         switch (hp)
         {
@@ -28,15 +31,7 @@ public class target : MonoBehaviour
             case 2:
                 renderer.material.color = Color.red;
                 break;
-            case 3:
-                renderer.material.color = Color.cyan;
-                break;
-            case 4:
-                renderer.material.color = Color.green;
-                break;
-            case 5:
-                renderer.material.color = Color.blue;
-                break;
+  
          
             default:
                 renderer.material.color = Color.black;
@@ -55,7 +50,7 @@ public class target : MonoBehaviour
     //    target_b = targettmp.transform.position;
 
         // 타격 오브젝트 이동
-        transform.position = Vector3.MoveTowards(transform.position, target_b, 10.0f * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, target_b, target_speed * Time.deltaTime);
         // 지정된 위치에 타격 오브젝트 도착시 객체 소멸
         if (transform.position == target_b)
         {
@@ -69,7 +64,7 @@ public class target : MonoBehaviour
         // Hand 객체와 충돌 시 타격 오브젝트 파괴
         if (collision.gameObject.tag == "hand")
         {
-            hp -= 1;//-----------------------------------------------------------------0618 성두
+            hp -= 1;
             switch (hp)
             {
                 case 1:
@@ -79,28 +74,19 @@ public class target : MonoBehaviour
                 case 2:
                     renderer.material.color = Color.red;
                     break;
-                case 3:
-                    renderer.material.color = Color.cyan;
-                    break;
-                case 4:
-                    renderer.material.color = Color.green;
-                    break;
-                case 5:
-                    renderer.material.color = Color.blue;
-                    break;
-
                 default:
                     renderer.material.color = Color.black;
                     break;
             }
 
-            if (hp <= 0)//-----------------------------------------------------------------0618 성두
+            if (hp <= 0)
             {
                 controller.time += maxhp;
                 controller.score += maxhp;
 
               
                     controller.level = (controller.score / 5) +1;
+                    
                 
                     GetComponent<MeshExploder>().Explode();// 깨지는 이미지 구현한거 
                 this.gameObject.SetActive(false);
