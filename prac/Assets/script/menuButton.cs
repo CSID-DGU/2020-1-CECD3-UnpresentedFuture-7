@@ -31,6 +31,7 @@ public class menuButton : MonoBehaviour
 
     public  void  reStart()
     {   Time.timeScale = 1f;
+    controller.heart=30f;
         Debug.Log("why not react...");
         controller.score=0;
         controller.level=1;

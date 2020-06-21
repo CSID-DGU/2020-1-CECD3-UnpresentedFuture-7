@@ -11,11 +11,13 @@ public class controller : MonoBehaviour
     public Text heart_text;
     public static int level = 1;
     public static int score = 0;
-    public static float time = 0;// 0618 성두 static
+    public static float heart = 0;// 0618 성두 static
     public GameObject firstprefab;
     Vector3 original_p;
     public Canvas menu;
-    private bool isopen = false;
+   private bool isopen = false;
+     public Canvas menu_gameover;
+     private bool isover=false;
 
     public float delayTime;
 
@@ -23,18 +25,24 @@ public class controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        time = 60f;
+        heart = 30f;
         original_p = new Vector3(0.0f, 5.0f, 10f);
         StartCoroutine(continueing());
         delayTime = 3.0f;
+        
+                menu_gameover.enabled = false;
 
     }
     void Update()
     {
-        time -= Time.deltaTime;
-        if (time < 0)
+        heart -= Time.deltaTime;
+        if (heart < 0)
         {
             Time.timeScale = 0;
+
+                menu_gameover.enabled = true;
+                //Instantiate(menu);
+
         }
         //  Debug.Log("heart : " + time);
         if (Input.GetKeyDown("escape"))
@@ -56,7 +64,7 @@ public class controller : MonoBehaviour
 
         score_text.text = "score : " + score;   // 점수 갱신
         level_text.text = "level : " + level;   // 점수 갱신
-        heart_text.text = "heart : " + Mathf.Ceil(time).ToString(); //라이프 갱신
+        heart_text.text = "heart : " + Mathf.Ceil(heart).ToString(); //라이프 갱신
     }
     
 

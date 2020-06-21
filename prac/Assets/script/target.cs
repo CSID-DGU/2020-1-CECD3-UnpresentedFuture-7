@@ -55,6 +55,7 @@ public class target : MonoBehaviour
         if (transform.position == target_b)
         {
             this.gameObject.SetActive(false);
+            controller.heart-=this.hp;
             Destroy(this.gameObject);
         }
 
@@ -81,7 +82,7 @@ public class target : MonoBehaviour
 
             if (hp <= 0)
             {
-                controller.time += maxhp;
+                controller.heart += maxhp;
                 controller.score += maxhp;
 
               
