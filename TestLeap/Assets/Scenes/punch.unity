@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1523,7 +1523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &894268186
 Transform:
   m_ObjectHideFlags: 0
@@ -1782,7 +1782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &935470602
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2391,6 +2391,10 @@ MonoBehaviour:
   level_text: {fileID: 71857713}
   heart_text: {fileID: 471059681}
   firstprefab: {fileID: 5426734512586408710, guid: 017c7f6543a1fc64cbeeb1d3d3917bf8,
+    type: 3}
+  secondprefab: {fileID: 3762008209734816658, guid: 0b4dc6bdf36979a4bb4e3c66d1c90657,
+    type: 3}
+  thirdprefab: {fileID: 3050606821979176797, guid: ddad8c8fa838c7c4390d79fe60f685d5,
     type: 3}
   menu: {fileID: 1504964445}
   menu_gameover: {fileID: 263802244}

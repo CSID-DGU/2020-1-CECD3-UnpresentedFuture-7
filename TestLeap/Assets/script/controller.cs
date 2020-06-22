@@ -13,6 +13,8 @@ public class controller : MonoBehaviour
     public static int score = 0;
     public static float heart = 0;// 0618 성두 static
     public GameObject firstprefab;
+    public GameObject secondprefab;
+    public GameObject thirdprefab;
     Vector3 original_p;
     public Canvas menu;
    private bool isopen = false;
@@ -73,15 +75,35 @@ public class controller : MonoBehaviour
     IEnumerator continueing()
     {
         while (true)
-        {
+        {float delay=delayTime/level;
             // 랜덤한 위치에 따라 타격 오브젝트 생성
+            if(delay<1.5f)
+            delay=1.5f;
+            
             Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
                                                 original_p.y + Random.Range(-5f, 5f),
                                                 original_p.z + Random.Range(-10f, 10f)),
                                                 Quaternion.identity);
-            float delay=delayTime/level;
-            if(delay<0.8f)
-            delay=0.8f;
+            if(level>4){
+                Instantiate(secondprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+                                                original_p.y + Random.Range(-5f, 5f),
+                                                original_p.z + Random.Range(-10f, 10f)),
+                                                Quaternion.identity);
+                                                delay=2.0f;
+                                               
+                                                
+            } if(level>9){
+                Instantiate(thirdprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+                                                original_p.y + Random.Range(-5f, 5f),
+                                                original_p.z + Random.Range(-10f, 10f)),
+                                                Quaternion.identity);
+                                                delay=2.5f;
+                                               
+                                                
+            }
+
+            
+            
 
             yield return new WaitForSeconds(delay);
         }
