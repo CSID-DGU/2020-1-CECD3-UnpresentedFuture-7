@@ -1,9 +1,8 @@
 Android
 PlayerPath?
-C:/Users/bohee/Desktop/testapp.apk
+C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/BoxingGamePrototype_0.1.apk
 SceneListBegin?
 Assets/Scenes/punch.unity
-Assets/Scenes/Start_Scene_YGC.unity
 SceneListEnd?
 be03f30055eb1be96cdb05ea724cbc62 Assembly-CSharp.dll:.RecordingControls
 3aefd1e4f0f51a4b55086cb92b751c4b Assembly-CSharp.dll:.FlowerGrower
@@ -256,7 +255,7 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-09abae16345cc33fec9a8548f376608d Assembly-CSharp.dll:.controller
+27601effeefab1d5366b67bc5ddf715d Assembly-CSharp.dll:.controller
 49045678c3d75cfa0ea78863f8872f3b Assembly-CSharp.dll:.VoxelSheet
 11319334e5365797f8056694f9b5dae4 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.TMP_DigitValidator
@@ -399,3 +398,8 @@ fe10de86e42ce80dc24cf76ac1c87c2a Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 ef2d4e9d59492b22f52c0343c2417144 Assembly-CSharp.dll:.PolyFinger
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.life_point
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultInitializationErrorHandler
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultTrackableEventHandler
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.BoundingBoxRenderer
+dff7a11839abb9fb7222280cf3c0a95a VuforiaScripts.dll:.DefaultModelRecoEventHandler

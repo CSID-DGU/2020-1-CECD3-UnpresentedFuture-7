@@ -57,19 +57,19 @@
      <Compile Include="Assets\LeapMotion\Editor\HandControllerEditor.cs" />
      <Compile Include="Assets\LeapMotion\Editor\LeapImageRetrieverEditor.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/2018.4.22f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -312,22 +312,22 @@
  <HintPath>C:/Program Files/Unity/2018.4.22f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/Editor/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/Editor/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/Editor/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/Editor/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>C:/Users/Owner/Documents/[HyunJae]2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/2018.4.22f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -687,6 +687,10 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{1D4DA710-C13A-2037-E677-061FBED8B76C}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="VuforiaScripts.csproj">
+      <Project>{224AC70B-4F8B-B1F6-307F-2C7F0377051D}</Project>      <Name>VuforiaScripts</Name>    </ProjectReference>
+    <ProjectReference Include="VuforiaEditorScripts.csproj">
+      <Project>{72A57FBB-BA2E-0F40-8F9E-1F074642B7AD}</Project>      <Name>VuforiaEditorScripts</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

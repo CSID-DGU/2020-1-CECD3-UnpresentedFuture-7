@@ -63,7 +63,7 @@ public class controller : MonoBehaviour
         
 
         score_text.text = "score : " + score;   // 점수 갱신
-        level_text.text = "level : " + level;   // 점수 갱신
+        level_text.text = "Lv : " + level;   // 점수 갱신
     }
     
 

@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/punch.unity
     guid: c9df2b21b363127409e55bdfef63e4c0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Start_Scene_YGC.unity
     guid: ac7666579f222f446845ede377049123
   m_configObjects: {}
