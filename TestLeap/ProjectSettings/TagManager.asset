@@ -6,6 +6,7 @@ TagManager:
   tags:
   - target
   - hand
+  - heart
   layers:
   - Default
   - TransparentFX

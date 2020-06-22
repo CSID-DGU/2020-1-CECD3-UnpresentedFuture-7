@@ -55,7 +55,7 @@ public class target : MonoBehaviour
         if (transform.position == target_b)
         {
             this.gameObject.SetActive(false);
-            controller.heart-=this.hp;
+            controller.heart -= this.hp;
             Destroy(this.gameObject);
         }
 

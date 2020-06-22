@@ -8,7 +8,6 @@ public class controller : MonoBehaviour
 
     public Text score_text;
     public Text level_text;
-    public Text heart_text;
     public static int level = 1;
     public static int score = 0;
     public static float heart = 0;// 0618 성두 static
@@ -46,7 +45,6 @@ public class controller : MonoBehaviour
                 //Instantiate(menu);
 
         }
-        //  Debug.Log("heart : " + time);
         if (Input.GetKeyDown("escape"))
         {
             isopen = !isopen;
@@ -66,7 +64,6 @@ public class controller : MonoBehaviour
 
         score_text.text = "score : " + score;   // 점수 갱신
         level_text.text = "level : " + level;   // 점수 갱신
-        heart_text.text = "heart : " + Mathf.Ceil(heart).ToString(); //라이프 갱신
     }
     
 
