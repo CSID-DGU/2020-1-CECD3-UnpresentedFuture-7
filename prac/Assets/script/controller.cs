@@ -11,9 +11,8 @@ public class controller : MonoBehaviour
     public Text heart_text;
     public static int level = 1;
     public static int score = 0;
-    public static float heart = 0;// 
+    public static float heart = 0;// 0618 성두 static
     public GameObject firstprefab;
-     public GameObject secondprefab;//0622 성두 static
     Vector3 original_p;
     public Canvas menu;
    private bool isopen = false;
