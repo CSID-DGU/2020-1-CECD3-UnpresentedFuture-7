@@ -38,7 +38,7 @@ public class target : MonoBehaviour
                 break;
         }
         r = GetComponent<Rigidbody>();
-        target_b = new Vector3(0.0f, 5.0f, 0.1f);
+        target_b = new Vector3(0.0f, 5.0f, 0.5f);
 
         original_p = transform.position;
     }
