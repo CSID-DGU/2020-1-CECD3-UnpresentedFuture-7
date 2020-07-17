@@ -1300,7 +1300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894268185}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2244,6 +2244,12 @@ MonoBehaviour:
     type: 3}
   thirdprefab: {fileID: 3050606821979176797, guid: ddad8c8fa838c7c4390d79fe60f685d5,
     type: 3}
+  Chili: {fileID: 6540437178731910128, guid: 19b2d5448e24f8745a69dd37ee279454, type: 3}
+  Kiwi: {fileID: 3901783089766918791, guid: 9465df597222e374eb9f723549fc11fb, type: 3}
+  Eggy: {fileID: 6197673796073586041, guid: e803685b628a6884783d46b35def5c72, type: 3}
+  Langsat: {fileID: 6960242420530232798, guid: af5fd4fa95fa7b24db557c2a89519a7b, type: 3}
+  Slime: {fileID: 1139530711854428822, guid: d2ea4c4b7bf81bb4c9b574ee29a9e65d, type: 3}
+  Turtle: {fileID: 4597726158548732272, guid: 859f9def0ef699541accb4dc5cf76c19, type: 3}
   menu: {fileID: 1504964445}
   menu_gameover: {fileID: 263802244}
   delayTime: 0
@@ -3338,7 +3344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802264674}
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 10, z: -5}
+  m_LocalPosition: {x: 0, y: 7.72, z: -6.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

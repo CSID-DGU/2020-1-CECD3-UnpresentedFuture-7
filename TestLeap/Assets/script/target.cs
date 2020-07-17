@@ -18,7 +18,7 @@ public class target : MonoBehaviour
     void Start()
     {
         
-        target_speed=10f*(1+((float)controller.level/20f));
+        target_speed=5f*(1+((float)controller.level/20f));// 원래 10 f
 
         renderer = gameObject.GetComponent<Renderer>();
         hp = (int)Random.Range(1f, 4f);

@@ -14,6 +14,14 @@ public class controller : MonoBehaviour
     public GameObject firstprefab;
     public GameObject secondprefab;
     public GameObject thirdprefab;
+
+    public GameObject Chili;
+    public GameObject Kiwi;
+    public GameObject Eggy;
+    public GameObject Langsat;
+    public GameObject Slime;
+    public GameObject Turtle;
+    
     Vector3 original_p;
     public Canvas menu;
    private bool isopen = false;
@@ -67,7 +75,12 @@ public class controller : MonoBehaviour
     }
     
 
-  
+  void instantiate_Prefab(GameObject Prefab){
+            Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+                                                original_p.y + Random.Range(-5f, 5f),
+                                                original_p.z + Random.Range(-10f, 10f)),
+                                                Quaternion.identity);
+  }
 
     IEnumerator continueing()
     {
@@ -77,23 +90,21 @@ public class controller : MonoBehaviour
             if(delay<1.5f)
             delay=1.5f;
             
-            Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
-                                                original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
-                                                Quaternion.identity);
+                                                       
+                                                instantiate_Prefab(Turtle);
+                                                instantiate_Prefab(Kiwi);
+                                            
+                                          
             if(level>4){
-                Instantiate(secondprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
-                                                original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
-                                                Quaternion.identity);
+          instantiate_Prefab(Chili);
+                                                instantiate_Prefab(Eggy);
                                                 delay=2.0f;
                                                
                                                 
             } if(level>9){
-                Instantiate(thirdprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
-                                                original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
-                                                Quaternion.identity);
+                instantiate_Prefab(Langsat);
+                                                instantiate_Prefab(Slime);
+                                                
                                                 delay=2.5f;
                                                
                                                 
