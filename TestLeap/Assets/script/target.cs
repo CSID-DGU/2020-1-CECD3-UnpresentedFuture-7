@@ -18,6 +18,8 @@ public class target : MonoBehaviour
     void Start()
     {
         
+transform.rotation=Quaternion.Euler(0,180,0);
+
         target_speed=5f*(1+((float)controller.level/20f));// 원래 10 f
 
         renderer = gameObject.GetComponent<Renderer>();

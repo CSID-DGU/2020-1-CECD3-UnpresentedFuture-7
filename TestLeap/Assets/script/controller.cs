@@ -76,9 +76,9 @@ public class controller : MonoBehaviour
     
 
   void instantiate_Prefab(GameObject Prefab){
-            Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+            Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-15f, 20f),
                                                 original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
+                                                original_p.z + Random.Range(-40f, 20f)),
                                                 Quaternion.identity);
   }
 
@@ -87,25 +87,20 @@ public class controller : MonoBehaviour
         while (true)
         {float delay=delayTime/level;
             // 랜덤한 위치에 따라 타격 오브젝트 생성
-            if(delay<1.5f)
-            delay=1.5f;
-            
-                                                       
-                                                instantiate_Prefab(Turtle);
-                                                instantiate_Prefab(Kiwi);
-                                            
-                                          
+            if(delay<1.5f){ delay=1.5f;}
+             instantiate_Prefab(Turtle);
+             instantiate_Prefab(Kiwi);
+                       
             if(level>4){
-          instantiate_Prefab(Chili);
-                                                instantiate_Prefab(Eggy);
-                                                delay=2.0f;
-                                               
-                                                
+            instantiate_Prefab(Chili);
+            instantiate_Prefab(Eggy);
+            delay=2.0f;
+                                  
             } if(level>9){
                 instantiate_Prefab(Langsat);
-                                                instantiate_Prefab(Slime);
+                instantiate_Prefab(Slime);
                                                 
-                                                delay=2.5f;
+                 delay=2.5f;
                                                
                                                 
             }
