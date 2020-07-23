@@ -1,11 +1,10 @@
 Android
 PlayerPath?
-C:/Users/njk28/Desktop/leapMotionCameraTest.apk
+C:/Users/Owner/Documents/2020-1-CECD3-UnpresentedFuture-7/TestLeap/BoxingGamePrototype_0.1.apk
 SceneListBegin?
 Assets/Scenes/punch.unity
 SceneListEnd?
 be03f30055eb1be96cdb05ea724cbc62 Assembly-CSharp.dll:.RecordingControls
-71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.BoundingBoxRenderer
 3aefd1e4f0f51a4b55086cb92b751c4b Assembly-CSharp.dll:.FlowerGrower
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 0920d1ebb6dc5bcef2aa0d9a6fdeb9d7 Assembly-CSharp.dll:.HandController
@@ -136,7 +135,6 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MeshExplosion
-71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultInitializationErrorHandler
 495a0124fe5300a480460d3d67c4040a Assembly-CSharp.dll:.LeapCameraAlignment
 fec700738fdd8c069adea14f4e9b5b84 Assembly-CSharp.dll:.AerodynamicLeaf
 c39f3aecb4efc9493750ce2d16c39101 Assembly-CSharp.dll:.FrameRateControls
@@ -146,7 +144,6 @@ c39f3aecb4efc9493750ce2d16c39101 Assembly-CSharp.dll:.FrameRateControls
 bff9339fd9117975a0f5124b3eb09b2a Assembly-CSharp.dll:.camera
 1f78fcfc2609ed8fe719790b2d9165de Assembly-CSharp.dll:.RiggedFinger
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ClickOrTapToExplode
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CameraView
 ed70e3ba5e1c128eebc58e020b051906 Assembly-CSharp.dll:.SliderDemo
 e6f0efd0e20669d577e9d21526b3d3f9 Assembly-CSharp.dll:TMPro.Examples.WarpTextExample
 dd7520b7d4e690e8c593273e7b9fbe80 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
@@ -261,7 +258,6 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 27601effeefab1d5366b67bc5ddf715d Assembly-CSharp.dll:.controller
 49045678c3d75cfa0ea78863f8872f3b Assembly-CSharp.dll:.VoxelSheet
 11319334e5365797f8056694f9b5dae4 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
-71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultTrackableEventHandler
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:TMPro.TMP_DigitValidator
 35a9693c388776aaf487636491a20f11 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e1300922cc039f41ab46a47f4cb05898 Unity.TextMeshPro.dll:TMPro.TMP_Settings
@@ -288,11 +284,9 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 ee6e3a1a59bff71f400df8f6475702e4 Assembly-CSharp.dll:.EnableUpdateOrdering
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.life_point
 7d58dc11073384c8a3d1b2b87563deea Assembly-CSharp.dll:.SliderToTextDataBinder
 274152c972478468d8321a977bbca8e3 Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
 990d74b1ab5c491767edff47955b41ad Assembly-CSharp.dll:.MagneticPinch
-dff7a11839abb9fb7222280cf3c0a95a VuforiaScripts.dll:.DefaultModelRecoEventHandler
 bd3f0ca738703903e759f77536ed74fd Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 a1ca1237bad0f30ea5ba8f4060929114 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 b4138a5a9d41e0a960e9e91f86c0e65e Assembly-CSharp.dll:.DisconnectionNotice
@@ -404,3 +398,8 @@ fe10de86e42ce80dc24cf76ac1c87c2a Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 ef2d4e9d59492b22f52c0343c2417144 Assembly-CSharp.dll:.PolyFinger
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.life_point
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultInitializationErrorHandler
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.DefaultTrackableEventHandler
+71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.BoundingBoxRenderer
+dff7a11839abb9fb7222280cf3c0a95a VuforiaScripts.dll:.DefaultModelRecoEventHandler
