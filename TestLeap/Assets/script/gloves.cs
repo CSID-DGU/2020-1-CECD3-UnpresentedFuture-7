@@ -10,12 +10,16 @@ public class gloves : MonoBehaviour
     {
         
       
-        Offset = transform.position - hand.transform.position;
+        //Offset = transform.position - hand.transform.position;
+        Offset =  hand.transform.position-transform.position;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = hand.transform.position+Offset;
+        //transform.position = hand.transform.position+Offset;
+        hand.transform.position=transform.position +Offset;
+    
     }
 }

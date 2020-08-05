@@ -11,9 +11,10 @@ public class FistSpeed : MonoBehaviour
     public GameObject ex;
     void Start()
     {
-        ex = GetComponent<GameObject>();
+      //  ex = GetComponent<GameObject>();
         LastPos = transform.position;
-        ex.SetActive(false);
+        CurrentSpeed = transform.position;
+     //   ex.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,8 +28,8 @@ public class FistSpeed : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("coll speed : "+CurrentSpeed.magnitude);
-        ex.SetActive(true);
-        Invoke("f", 2f);
+      //  ex.SetActive(true);
+     //   Invoke("f", 2f);
     }
     void f()
     {
