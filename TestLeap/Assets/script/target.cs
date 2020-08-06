@@ -9,22 +9,33 @@ public class target : MonoBehaviour
     Rigidbody r;
     Vector3 target_b;
     Vector3 original_p;
+
     GameObject targettmp;//---------------------------------------0618 성두
     int hp;
     int maxhp;
     float target_speed;
     Renderer renderer;
     // Start is called before the first frame update
+         private Vector3 LastPos;
+    public Vector3 CurrentSpeed;// { get; private set; }
+                                // Start is called before the first frame update
     void Start()
     {
+    LastPos = transform.position;
+    CurrentSpeed = transform.position;
+// 속도 측정 준비
+
+
         
-transform.rotation=Quaternion.Euler(0,180,0);
+    transform.rotation=Quaternion.Euler(0,180,0);
 
-        target_speed=5f*(1+((float)controller.level/20f));// 원래 10 f
+    target_speed=5f*(1+((float)controller.level/20f));// 원래 10 f
 
-        renderer = gameObject.GetComponent<Renderer>();
-        hp = (int)Random.Range(1f, 4f);
-        maxhp = hp;
+    renderer = gameObject.GetComponent<Renderer>();
+       // hp = (int)Random.Range(1f, 4f);
+    hp=1;
+    maxhp = hp;
+
         switch (hp)
         {
             case 1:
@@ -47,7 +58,14 @@ transform.rotation=Quaternion.Euler(0,180,0);
 
     // Update is called once per frame
     void Update()
-    {
+    {  Vector3 displacement = transform.position - LastPos;
+        CurrentSpeed = displacement / Time.deltaTime;
+       // Debug.Log(CurrentSpeed.magnitude);
+        LastPos = transform.position;
+// 속도 측정완료 = CurrentSpeed
+
+
+
       //  targettmp = GameObject.FindGameObjectWithTag("target");
     //    target_b = targettmp.transform.position;
 
@@ -67,7 +85,25 @@ transform.rotation=Quaternion.Euler(0,180,0);
         // Hand 객체와 충돌 시 타격 오브젝트 파괴
         if (collision.gameObject.tag == "hand")
         {
-            hp -= 1;
+          
+               Debug.Log("coll speed in target script : "+CurrentSpeed.magnitude);
+
+if(controller.level<=5){
+  hp -= 1;
+}
+else if(controller.level>5){
+if(CurrentSpeed.magnitude>10){
+     hp -= 1;
+        Debug.Log("----------------------------------------------------10 이상 성공 "+CurrentSpeed.magnitude);
+}
+}else{
+    if(CurrentSpeed.magnitude>20){
+         hp -= 1;
+            Debug.Log("------------------------------------------------------------20이상 성공  "+CurrentSpeed.magnitude);
+    }
+
+}
+           
             switch (hp)
             {
                 case 1:
