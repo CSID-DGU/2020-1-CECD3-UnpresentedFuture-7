@@ -88,21 +88,25 @@ public class target : MonoBehaviour
           
                Debug.Log("coll speed in target script : "+CurrentSpeed.magnitude);
 
-if(controller.level<=5){
-  hp -= 1;
+switch(controller.mode){
+    case 1:
+        if(CurrentSpeed.magnitude>10){
+        hp -= 1;
+        Debug.Log("----------------------------------------------------10 이상 성공 normal "+CurrentSpeed.magnitude);
+        }
+    break;
+    case 2:
+        if(CurrentSpeed.magnitude>20){
+        hp -= 1;
+        Debug.Log("------------------------------------------------------------20이상 성공 hard  "+CurrentSpeed.magnitude);
+        }
+    break;
+    default :
+     Debug.Log("------------------------------------------------------------ 성공 easy  "+CurrentSpeed.magnitude);
+        hp -= 1;
+        break;
 }
-else if(controller.level>5){
-if(CurrentSpeed.magnitude>10){
-     hp -= 1;
-        Debug.Log("----------------------------------------------------10 이상 성공 "+CurrentSpeed.magnitude);
-}
-}else{
-    if(CurrentSpeed.magnitude>20){
-         hp -= 1;
-            Debug.Log("------------------------------------------------------------20이상 성공  "+CurrentSpeed.magnitude);
-    }
 
-}
            
             switch (hp)
             {

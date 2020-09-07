@@ -8,6 +8,9 @@ public class controller : MonoBehaviour
 
     public Text score_text;
     public Text level_text;
+
+    public static bool isglovedRight=false;//글러브 추가 성두
+    public static bool isglovedLeft=false;//글러브 추가 성두
     public static int level = 1;
     public static int score = 0;
     public static float heart = 0;// 0618 성두 static
@@ -24,11 +27,17 @@ public class controller : MonoBehaviour
     
     Vector3 original_p;
     public Canvas menu;
+
    private bool isopen = false;
      public Canvas menu_gameover;
      private bool isover=false;
 
     public float delayTime;
+
+    
+
+    public static int mode=0; // 0/1/2 : 각각 easy/normal/hard
+    public Canvas mode_canvas;
 
 
     // Start is called before the first frame update
@@ -40,6 +49,7 @@ public class controller : MonoBehaviour
         delayTime = 3.0f;
         
                 menu_gameover.enabled = false;
+                 mode_canvas.enabled=false;
 
     }
     void Update()
@@ -58,12 +68,13 @@ public class controller : MonoBehaviour
             isopen = !isopen;
             if (isopen)
             {
+                mode_canvas.enabled=true;
                 Time.timeScale = 0.001f;
                 menu.enabled = true;
                 //Instantiate(menu);
             }
             else
-            {
+            {mode_canvas.enabled=false;
                 menu.enabled = false;
                 Time.timeScale = 1f;
             }
@@ -98,16 +109,9 @@ public class controller : MonoBehaviour
                                   
             } if(level>9){
                 instantiate_Prefab(Langsat);
-                instantiate_Prefab(Slime);
-                                                
-                 delay=2.5f;
-                                               
-                                                
+                instantiate_Prefab(Slime);                
+                 delay=2.5f;                       
             }
-
-            
-            
-
             yield return new WaitForSeconds(delay);
         }
     }

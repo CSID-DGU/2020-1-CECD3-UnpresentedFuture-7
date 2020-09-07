@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class menuButton : MonoBehaviour
 {
+        public Text mode_text;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+          controller.mode=0;
+          mode_text.text="easy";
     }
 
     // Update is called once per frame
@@ -28,10 +32,22 @@ public class menuButton : MonoBehaviour
          controller.score-=5;
         controller.level--;
     }
+    public void easy_mode(){
+        controller.mode=0;
+        mode_text.text="easy";
+    }
+      public void normal_mode(){
+        controller.mode=1;
+        mode_text.text="normal";
+    }
+      public void hard_mode(){
+        controller.mode=2;
+        mode_text.text="hard";
+    }
 
     public  void  reStart()
     {   Time.timeScale = 1f;
-    controller.heart=30f;
+        controller.heart=30f;
         Debug.Log("why not react...");
         controller.score=0;
         controller.level=1;
