@@ -77,22 +77,22 @@ public class controller : MonoBehaviour
             if(delay<1.5f)
             delay=1.5f;
             
-            Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+            Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-20f, 20f),
                                                 original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
+                                                original_p.z + Random.Range(-5f, 10f)),
                                                 Quaternion.identity);
             if(level>4){
-                Instantiate(secondprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+                Instantiate(secondprefab, new Vector3(original_p.x + Random.Range(-20f, 20f),
                                                 original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
+                                                original_p.z + Random.Range(-5f, 10f)),
                                                 Quaternion.identity);
                                                 delay=2.0f;
                                                
                                                 
             } if(level>9){
-                Instantiate(thirdprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+                Instantiate(thirdprefab, new Vector3(original_p.x + Random.Range(-20f, 20f),
                                                 original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
+                                                original_p.z + Random.Range(-5f, 10f)),
                                                 Quaternion.identity);
                                                 delay=2.5f;
                                                
