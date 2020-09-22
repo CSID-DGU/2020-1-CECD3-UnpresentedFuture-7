@@ -8,13 +8,46 @@ public class CameraImage : MonoBehaviour {
     WebCamTexture webcamTexture;
     RawImage image;
 
+
+
+
+
+
+      public Renderer display;
+       private int currentIndex = 0;
+
     void Start() {
         //delay initialize camera
         
         webcamTexture = new WebCamTexture();
         image = GetComponent<RawImage>();
         image.texture = webcamTexture;
+        //webcamTexture.Play();
+
+
+
+
+
+   WebCamDevice[] devices = WebCamTexture.devices;
+     for (int i = 0; i < devices.Length; i++)
+     {
+         Debug.Log(i+devices[i].name);
+     }
+
+
+        if (webcamTexture != null)
+        {
+            display.material.mainTexture = null;
+            webcamTexture.Stop();
+            webcamTexture = null;
+        }
+
+
+          WebCamDevice device = WebCamTexture.devices[currentIndex];
+          webcamTexture = new WebCamTexture(device.name);
+        display.material.mainTexture = webcamTexture;
         webcamTexture.Play();
+
     }
 
     public Color32[] ProcessImage(){

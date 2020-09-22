@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/njk28/Desktop/leapMotionCameraTest.apk
+C:/Users/bohee/Desktop/dd.apk
 SceneListBegin?
 Assets/Scenes/punch.unity
 SceneListEnd?
@@ -8,6 +8,7 @@ be03f30055eb1be96cdb05ea724cbc62 Assembly-CSharp.dll:.RecordingControls
 71bb6a6b6c8f052f948db64c7dd3ca4f VuforiaScripts.dll:.BoundingBoxRenderer
 3aefd1e4f0f51a4b55086cb92b751c4b Assembly-CSharp.dll:.FlowerGrower
 3c08375166df118bd1801438fc36b92f Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
+bac1526706bb4c3e51a553f1bc13c67f Assembly-CSharp.dll:.follow_maincamera
 0920d1ebb6dc5bcef2aa0d9a6fdeb9d7 Assembly-CSharp.dll:.HandController
 b51dcc01feff36011d496e4a75765ccd Assembly-CSharp.dll:.ScrollBase
 2e816009d8647fc6604db6f8fe4af0d1 Assembly-CSharp.dll:LMWidgets.HilightTextVolume
@@ -107,6 +108,7 @@ a92a310c386887bde7a4c3f1ff6b0d09 Assembly-CSharp.dll:.StemMesh
 62686f713fe4646f15f88cd8ff2928ac Assembly-CSharp.dll:.Fade
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.IgnoreInternalCollisions
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.enemy
+20d6199a1e812fd57e607f2fa2058ba4 Assembly-CSharp.dll:.CameraImage
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -234,6 +236,7 @@ e63944317d2f5958e31963668bb29158 Assembly-CSharp.dll:TMPro.Examples.VertexJitter
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SliderDemoGraphics
 fc4c0c5913a42f76c89ef7b2709c09be Assembly-CSharp.dll:.HandFader
+53547f9061190c592fe97bfbd8e49327 Assembly-CSharp.dll:.ObjectDetection
 248e6e19df906202e4c3ed739a5ffb12 Assembly-CSharp.dll:.ResetCollisionsOnBreak
 3d1e51a95df6d4c979bd665e62e7294a Assembly-CSharp.dll:.MovementManager
 20b9af782dd450f344ee0b837c518cec Assembly-CSharp.dll:.DebugHand
@@ -404,5 +407,3 @@ fe10de86e42ce80dc24cf76ac1c87c2a Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 ef2d4e9d59492b22f52c0343c2417144 Assembly-CSharp.dll:.PolyFinger
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CameraImage
-53547f9061190c592fe97bfbd8e49327 Assembly-CSharp.dll:.ObjectDetection
