@@ -11,6 +11,7 @@ public class gloves : MonoBehaviour
     void Start()
     {
         originposition=transform.position;
+        
       
         //Offset = transform.position - hand.transform.position;
        // Offset =  hand.transform.position-transform.position;

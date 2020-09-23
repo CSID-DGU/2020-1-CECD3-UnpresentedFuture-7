@@ -40,9 +40,46 @@ public class controller : MonoBehaviour
     public Canvas mode_canvas;
 
 
+
+
+
+
+    public Renderer display;
+    WebCamTexture camTexture;
+    private int currentIndex = 0;
+// 웹캡
+    
     // Start is called before the first frame update
+
+
     void Start()
     {
+        WebCamDevice[] devices = WebCamTexture.devices;
+     for (int i = 0; i < devices.Length; i++)
+     {
+         Debug.Log(i+devices[i].name);
+     }
+
+
+        if (camTexture != null)
+        {
+            display.material.mainTexture = null;
+            camTexture.Stop();
+            camTexture = null;
+        }
+        WebCamDevice device = WebCamTexture.devices[currentIndex];
+        Debug.Log(device.name);
+        WebCamDevice device2 = devices[currentIndex];
+
+        Debug.Log(device2.name);
+        
+        camTexture = new WebCamTexture(device.name);
+        display.material.mainTexture = camTexture;
+        camTexture.Play();
+
+
+
+        
         heart = 30f;
         original_p = new Vector3(0.0f, 5.0f, 10f);
         StartCoroutine(continueing());
