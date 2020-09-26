@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://arboxing-d5812.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">903032309821</string>
+  <string name="google_storage_bucket" translatable="false">arboxing-d5812.appspot.com</string>
+  <string name="project_id" translatable="false">arboxing-d5812</string>
+  <string name="google_api_key" translatable="false">AIzaSyBOUUhGVTEY3O1i3gjDt943PYGBQo59W9U</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBOUUhGVTEY3O1i3gjDt943PYGBQo59W9U</string>
+  <string name="google_app_id" translatable="false">1:903032309821:android:a7a848f87fdcbcabc68254</string>
+  <string name="default_web_client_id" translatable="false">903032309821-kkh9i1g139n4agvkrvb4lso2kf7petl3.apps.googleusercontent.com</string>
+</resources>

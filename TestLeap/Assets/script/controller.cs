@@ -8,11 +8,12 @@ public class controller : MonoBehaviour
 
     public Text score_text;
     public Text level_text;
-    public Text heart_text;
     public static int level = 1;
     public static int score = 0;
     public static float heart = 0;// 0618 성두 static
     public GameObject firstprefab;
+    public GameObject secondprefab;
+    public GameObject thirdprefab;
     Vector3 original_p;
     public Canvas menu;
    private bool isopen = false;
@@ -44,7 +45,6 @@ public class controller : MonoBehaviour
                 //Instantiate(menu);
 
         }
-        //  Debug.Log("heart : " + time);
         if (Input.GetKeyDown("escape"))
         {
             isopen = !isopen;
@@ -63,8 +63,7 @@ public class controller : MonoBehaviour
         
 
         score_text.text = "score : " + score;   // 점수 갱신
-        level_text.text = "level : " + level;   // 점수 갱신
-        heart_text.text = "heart : " + Mathf.Ceil(heart).ToString(); //라이프 갱신
+        level_text.text = "Lv : " + level;   // 점수 갱신
     }
     
 
@@ -73,15 +72,35 @@ public class controller : MonoBehaviour
     IEnumerator continueing()
     {
         while (true)
-        {
+        {float delay=delayTime/level;
             // 랜덤한 위치에 따라 타격 오브젝트 생성
-            Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-30f, 30f),
+            if(delay<1.5f)
+            delay=1.5f;
+            
+            Instantiate(firstprefab, new Vector3(original_p.x + Random.Range(-20f, 20f),
                                                 original_p.y + Random.Range(-5f, 5f),
-                                                original_p.z + Random.Range(-10f, 10f)),
+                                                original_p.z + Random.Range(-5f, 10f)),
                                                 Quaternion.identity);
-            float delay=delayTime/level;
-            if(delay<0.8f)
-            delay=0.8f;
+            if(level>4){
+                Instantiate(secondprefab, new Vector3(original_p.x + Random.Range(-20f, 20f),
+                                                original_p.y + Random.Range(-5f, 5f),
+                                                original_p.z + Random.Range(-5f, 10f)),
+                                                Quaternion.identity);
+                                                delay=2.0f;
+                                               
+                                                
+            } if(level>9){
+                Instantiate(thirdprefab, new Vector3(original_p.x + Random.Range(-20f, 20f),
+                                                original_p.y + Random.Range(-5f, 5f),
+                                                original_p.z + Random.Range(-5f, 10f)),
+                                                Quaternion.identity);
+                                                delay=2.5f;
+                                               
+                                                
+            }
+
+            
+            
 
             yield return new WaitForSeconds(delay);
         }

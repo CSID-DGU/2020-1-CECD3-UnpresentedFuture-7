@@ -38,7 +38,7 @@ public class target : MonoBehaviour
                 break;
         }
         r = GetComponent<Rigidbody>();
-        target_b = new Vector3(0.0f, 5.0f, 0.1f);
+        target_b = new Vector3(0.0f, 5.0f, 0.5f);
 
         original_p = transform.position;
     }
@@ -55,7 +55,7 @@ public class target : MonoBehaviour
         if (transform.position == target_b)
         {
             this.gameObject.SetActive(false);
-            controller.heart-=this.hp;
+            controller.heart -= this.hp;
             Destroy(this.gameObject);
         }
 
