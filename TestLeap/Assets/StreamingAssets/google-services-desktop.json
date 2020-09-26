@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "903032309821",
+    "firebase_url": "https://arboxing-d5812.firebaseio.com",
+    "project_id": "arboxing-d5812",
+    "storage_bucket": "arboxing-d5812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903032309821:android:a7a848f87fdcbcabc68254",
+        "android_client_info": {
+          "package_name": "com.Unpresented.Future"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903032309821-kkh9i1g139n4agvkrvb4lso2kf7petl3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOUUhGVTEY3O1i3gjDt943PYGBQo59W9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903032309821-kkh9i1g139n4agvkrvb4lso2kf7petl3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
