@@ -7,14 +7,10 @@ using Vuforia;
 public class CameraImage : MonoBehaviour {
     WebCamTexture webcamTexture;
     RawImage image;
+    public Renderer display;
+    private int currentIndex = 0;
 
-
-
-
-
-
-      public Renderer display;
-       private int currentIndex = 0;
+    public Text Warning;
 
     void Start() {
         //delay initialize camera
@@ -24,15 +20,12 @@ public class CameraImage : MonoBehaviour {
         image.texture = webcamTexture;
         //webcamTexture.Play();
 
+        WebCamDevice[] devices = WebCamTexture.devices;
 
-
-
-
-   WebCamDevice[] devices = WebCamTexture.devices;
-     for (int i = 0; i < devices.Length; i++)
-     {
-         Debug.Log(i+devices[i].name);
-     }
+        for (int i = 0; i < devices.Length; i++)
+        {
+            Debug.Log(i+devices[i].name);
+        }
 
 
         if (webcamTexture != null)
@@ -42,15 +35,23 @@ public class CameraImage : MonoBehaviour {
             webcamTexture = null;
         }
 
-
-          WebCamDevice device = WebCamTexture.devices[currentIndex];
-          webcamTexture = new WebCamTexture(device.name);
+        WebCamDevice device = WebCamTexture.devices[currentIndex];
+        webcamTexture = new WebCamTexture(device.name);
         display.material.mainTexture = webcamTexture;
         webcamTexture.Play();
 
+        Warning.text = "";
     }
 
-    public Color32[] ProcessImage(){
+    void Update()
+    {
+        if (ObjectDetection.detectedObject.Equals("person"))
+            Warning.text = "전방을 주의하세요";
+        else
+            Warning.text = "";
+    }
+
+    public Color32[] ProcessImage() {
         //crop
         var cropped = TextureTools.CropTexture(webcamTexture);
         //scale
