@@ -9,8 +9,8 @@ public class controller : MonoBehaviour
     public Text score_text;
     public Text level_text;
 
-    public static bool isglovedRight=false;//글러브 추가 성두
-    public static bool isglovedLeft=false;//글러브 추가 성두
+    // public static bool isglovedRight=false;//글러브 추가 성두
+    // public static bool isglovedLeft=false;//글러브 추가 성두
     public static int level = 1;
     public static int score = 0;
     public static float heart = 0;// 0618 성두 static
@@ -33,53 +33,17 @@ public class controller : MonoBehaviour
      private bool isover=false;
 
     public float delayTime;
-
-    
-
     public static int mode=0; // 0/1/2 : 각각 easy/normal/hard
     public Canvas mode_canvas;
-
-
-
-
-
-
-    public Renderer display;
-    WebCamTexture camTexture;
-    private int currentIndex = 0;
-// 웹캡
     
     // Start is called before the first frame update
 
 
     void Start()
     {
-        WebCamDevice[] devices = WebCamTexture.devices;
-     for (int i = 0; i < devices.Length; i++)
-     {
-         Debug.Log(i+devices[i].name);
-     }
 
+       // oncam();
 
-        if (camTexture != null)
-        {
-            display.material.mainTexture = null;
-            camTexture.Stop();
-            camTexture = null;
-        }
-        WebCamDevice device = WebCamTexture.devices[currentIndex];
-        Debug.Log(device.name);
-        WebCamDevice device2 = devices[currentIndex];
-
-        Debug.Log(device2.name);
-        
-        camTexture = new WebCamTexture(device.name);
-        display.material.mainTexture = camTexture;
-        camTexture.Play();
-
-
-
-        
         heart = 30f;
         original_p = new Vector3(0.0f, 5.0f, 10f);
         StartCoroutine(continueing());
@@ -152,4 +116,5 @@ public class controller : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
     }
+
 }

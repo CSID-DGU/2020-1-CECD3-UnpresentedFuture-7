@@ -96,7 +96,7 @@ MonoBehaviour:
   m_MinSize: {x: 919, y: 348}
   m_MaxSize: {x: 22014, y: 10024}
   vertical: 0
-  controlID: 71
+  controlID: 123
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 348}
   m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 107
+  controlID: 124
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 84240000
+      m_SelectedIDs: 08230000
       m_LastClickedID: 0
       m_ExpandedIDs: c0fbffff
       m_RenameOverlay:
@@ -633,18 +633,18 @@ MonoBehaviour:
     m_ExpandedIDs: ffffffff00000000702a0000da2a0000ee2c0000f6300000b63100002a32000026340000723700003c38000066550000685500006a550000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: gloves
-      m_OriginalName: gloves
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 9348
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.08255819, y: 0.7542905, z: -0.6441165, w: 0.09666428}
     speed: 2
-    m_Value: {x: 0.08255819, y: 0.75429046, z: -0.6441165, w: 0.09666427}
+    m_Value: {x: 0.08255819, y: 0.7542905, z: -0.6441165, w: 0.09666428}
   m_Size:
     m_Target: 6.363285
     speed: 2
