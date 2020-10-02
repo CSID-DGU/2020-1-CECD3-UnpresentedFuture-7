@@ -9,20 +9,33 @@ public class target : MonoBehaviour
     Rigidbody r;
     Vector3 target_b;
     Vector3 original_p;
+
     GameObject targettmp;//---------------------------------------0618 성두
     int hp;
     int maxhp;
     float target_speed;
     Renderer renderer;
     // Start is called before the first frame update
+         private Vector3 LastPos;
+    public Vector3 CurrentSpeed;// { get; private set; }
+                                // Start is called before the first frame update
     void Start()
     {
-        
-        target_speed=10f*(1+((float)controller.level/20f));
+    LastPos = transform.position;
+    CurrentSpeed = transform.position;
+// 속도 측정 준비
 
-        renderer = gameObject.GetComponent<Renderer>();
-        hp = (int)Random.Range(1f, 4f);
-        maxhp = hp;
+
+        
+    transform.rotation=Quaternion.Euler(0,180,0);
+
+    target_speed=5f*(1+((float)controller.level/20f));// 원래 10 f
+
+    renderer = gameObject.GetComponent<Renderer>();
+       // hp = (int)Random.Range(1f, 4f);
+    hp=1;
+    maxhp = hp;
+
         switch (hp)
         {
             case 1:
@@ -38,14 +51,21 @@ public class target : MonoBehaviour
                 break;
         }
         r = GetComponent<Rigidbody>();
-        target_b = new Vector3(0.0f, 5.0f, 0.5f);
+        target_b = new Vector3(0.0f, 5.0f, 0.1f);
 
         original_p = transform.position;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {  Vector3 displacement = transform.position - LastPos;
+        CurrentSpeed = displacement / Time.deltaTime;
+       // Debug.Log(CurrentSpeed.magnitude);
+        LastPos = transform.position;
+// 속도 측정완료 = CurrentSpeed
+
+
+
       //  targettmp = GameObject.FindGameObjectWithTag("target");
     //    target_b = targettmp.transform.position;
 
@@ -65,7 +85,29 @@ public class target : MonoBehaviour
         // Hand 객체와 충돌 시 타격 오브젝트 파괴
         if (collision.gameObject.tag == "hand")
         {
-            hp -= 1;
+          
+               Debug.Log("coll speed in target script : "+CurrentSpeed.magnitude);
+
+switch(controller.mode){
+    case 1:
+        if(CurrentSpeed.magnitude>10){
+        hp -= 1;
+        Debug.Log("----------------------------------------------------10 이상 성공 normal "+CurrentSpeed.magnitude);
+        }
+    break;
+    case 2:
+        if(CurrentSpeed.magnitude>20){
+        hp -= 1;
+        Debug.Log("------------------------------------------------------------20이상 성공 hard  "+CurrentSpeed.magnitude);
+        }
+    break;
+    default :
+     Debug.Log("------------------------------------------------------------ 성공 easy  "+CurrentSpeed.magnitude);
+        hp -= 1;
+        break;
+}
+
+           
             switch (hp)
             {
                 case 1:
