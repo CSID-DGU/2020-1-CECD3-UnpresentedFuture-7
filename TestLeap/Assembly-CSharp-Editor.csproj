@@ -56,6 +56,12 @@
      <Compile Include="Assets\asset\Mesh Explosion\Editor\MeshExploderEditor.cs" />
      <Compile Include="Assets\LeapMotion\Editor\HandControllerEditor.cs" />
      <Compile Include="Assets\LeapMotion\Editor\LeapImageRetrieverEditor.cs" />
+     <None Include="Assets\Firebase\Editor\FirestoreDependencies.xml" />
+     <None Include="Assets\Firebase\Editor\FirebaseFirestore_version-6.15.2_manifest.txt" />
+     <None Include="Assets\Firebase\Editor\AuthDependencies.xml" />
+     <None Include="Assets\Firebase\Editor\DatabaseDependencies.xml" />
+     <None Include="Assets\Firebase\Editor\FirebaseAuth_version-6.15.2_manifest.txt" />
+     <None Include="Assets\Firebase\Editor\FirebaseDatabase_version-6.15.2_manifest.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -314,6 +320,30 @@
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
+ <Reference Include="Google.VersionHandler">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.external-dependency-manager@1.2.156/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Analytics">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.analytics@6.15.2/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.App">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.App.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Platform">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.TaskExtension">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.MiniJson">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Compat">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Tasks">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -329,44 +359,14 @@
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.App">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.App.dll</HintPath>
+ <Reference Include="Firebase.Firestore">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Firebase/Plugins/Firebase.Firestore.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.Analytics">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.analytics@6.15.2/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+ <Reference Include="Firebase.Auth">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.Platform">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.Platform.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Tasks">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
- </Reference>
- <Reference Include="Google.JarResolver_v1.2.156">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.external-dependency-manager@1.2.156/ExternalDependencyManager/Editor/Google.JarResolver_v1.2.156.dll</HintPath>
- </Reference>
- <Reference Include="Google.MiniJson">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Google.MiniJson.dll</HintPath>
- </Reference>
- <Reference Include="Google.VersionHandler">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.external-dependency-manager@1.2.156/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Editor">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Editor/Firebase.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Google.VersionHandlerImpl_v1.2.156">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.external-dependency-manager@1.2.156/ExternalDependencyManager/Editor/Google.VersionHandlerImpl_v1.2.156.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Compat">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
- </Reference>
- <Reference Include="Google.IOSResolver_v1.2.156">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.external-dependency-manager@1.2.156/ExternalDependencyManager/Editor/Google.IOSResolver_v1.2.156.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.TaskExtension">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
- </Reference>
- <Reference Include="Google.PackageManagerResolver_v1.2.156">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.external-dependency-manager@1.2.156/ExternalDependencyManager/Editor/Google.PackageManagerResolver_v1.2.156.dll</HintPath>
+ <Reference Include="Firebase.Database">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.22f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

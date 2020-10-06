@@ -15,7 +15,7 @@ public class enemy : MonoBehaviour
         mesh = GetComponent<MeshRenderer>();
         mat = mesh.material;
         //changemove();
-
+        
     }
 
     // Update is called once per frame

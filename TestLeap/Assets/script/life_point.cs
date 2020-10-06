@@ -24,6 +24,9 @@ public class life_point : MonoBehaviour
             hearts[2].SetActive(false);
             hearts[3].SetActive(false);
             hearts[4].SetActive(false);
+            API temp = new API();
+            temp.Start();
+            print("nono");
         } 
         else if (controller.heart < 5) {
             hearts[0].SetActive(true);

@@ -142,6 +142,7 @@
      <Compile Include="Assets\LeapMotion+OVR\Widgets\Scripts\DataBinderExamples\SliderToTextDataBinder.cs" />
      <Compile Include="Assets\LeapMotion+OVR\Widgets\Scripts\DataBinderExamples\ToggleToTextDataBinder.cs" />
      <Compile Include="Assets\LeapMotion+OVR\Widgets\Scripts\WidgetsEnabler.cs" />
+     <Compile Include="Assets\script\API.cs" />
      <Compile Include="Assets\script\camera.cs" />
      <Compile Include="Assets\script\controller.cs" />
      <Compile Include="Assets\script\enemy.cs" />
@@ -194,6 +195,7 @@
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\LeapMotion\README_BEFORE_UPDATING.txt" />
      <None Include="Assets\Vuforia\Shaders\VuforiaVB_YUVNV12_YUVNV21.cginc" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-firestore-unity\maven-metadata.xml" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -206,6 +208,7 @@
      <None Include="Assets\LeapMotion\Dependencies.txt" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\LeapMotion\Resources\ThresholdOverlay.shader" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
      <None Include="Assets\Vuforia\Shaders\VuforiaVideoBackground.cginc" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
@@ -235,6 +238,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\asset\Mesh Explosion\Read Me.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
@@ -457,20 +461,17 @@
  <Reference Include="LeapCSharp.NET3.5">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <Reference Include="Firebase.Analytics">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.analytics@6.15.2/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.App">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.Analytics">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.analytics@6.15.2/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
- </Reference>
  <Reference Include="Firebase.Platform">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.Platform.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Tasks">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+ <Reference Include="Firebase.TaskExtension">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
  </Reference>
  <Reference Include="Google.MiniJson">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Google.MiniJson.dll</HintPath>
@@ -478,8 +479,20 @@
  <Reference Include="Unity.Compat">
  <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.TaskExtension">
- <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+ <Reference Include="Unity.Tasks">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.google.firebase.app@6.15.2/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Firestore">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Firebase/Plugins/Firebase.Firestore.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Auth">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Database">
+ <HintPath>D:/MYGitHub/2020-1-CECD3-UnpresentedFuture-7/TestLeap/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.22f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
