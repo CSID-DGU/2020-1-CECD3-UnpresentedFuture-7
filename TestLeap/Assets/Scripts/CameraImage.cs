@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using Vuforia;
 
 public class CameraImage : MonoBehaviour {
@@ -11,6 +12,10 @@ public class CameraImage : MonoBehaviour {
     private int currentIndex = 0;
 
     public Text Warning;
+
+    private float _timeout = 3f;
+
+    bool flag = true;
 
     void Start() {
         //delay initialize camera
@@ -41,14 +46,40 @@ public class CameraImage : MonoBehaviour {
         webcamTexture.Play();
 
         Warning.text = "";
+
+        
     }
 
     void Update()
     {
-        if (ObjectDetection.detectedObject.Equals("person"))
-            Warning.text = "전방을 주의하세요";
-        else
+        if (ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) {
+            if (flag) {
+                flag = false;
+                StartCoroutine(BlinkText());
+            }
+        }
+        else {
             Warning.text = "";
+        }
+
+        // if (ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) {
+        //     flag = true;
+        // }
+
+        // if (_timeout > 2f && flag) {
+        //     Warning.text = "전방을 주의하세요";
+        //     _timeout -= Time.deltaTime;
+        // }
+
+        // if (ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) {
+        //     if (_timeout == 3f) {
+        //         Warning.text = "전방을 주의하세요";
+                
+        //     }
+        // }
+        // else {
+        //     Warning.text = "";
+        // }
     }
 
     public Color32[] ProcessImage() {
@@ -59,4 +90,17 @@ public class CameraImage : MonoBehaviour {
         //run detection
         return scaled.GetPixels32();
     }
+
+    public IEnumerator BlinkText() {
+        int count = 0;
+        while (count < 3) {
+            Warning.text = "전방을 주의하세요";
+            yield return new WaitForSeconds (0.5f);
+            Warning.text = "";
+            yield return new WaitForSeconds (0.5f);
+            count++;
+        }
+        flag = true;
+    }
+
 }
