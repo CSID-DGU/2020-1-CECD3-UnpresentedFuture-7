@@ -4,5 +4,8 @@ labels:
 - Rigid
 - Hand
 - Physics
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

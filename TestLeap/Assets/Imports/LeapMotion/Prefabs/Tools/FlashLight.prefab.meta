@@ -3,5 +3,8 @@ guid: 00a0c033c1cee402a847a30b394643f7
 labels:
 - Tool
 - Flashlight
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

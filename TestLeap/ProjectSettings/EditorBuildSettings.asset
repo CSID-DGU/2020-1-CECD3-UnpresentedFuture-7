@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/myScenes/Punch_Scene.unity
+    path: Assets/Scenes/punch_temp.unity
     guid: c9df2b21b363127409e55bdfef63e4c0
   - enabled: 0
     path: Assets/myScenes/Start_Scene.unity
