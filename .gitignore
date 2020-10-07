@@ -12,8 +12,6 @@ TestLeap/[Ll]ogs/
 TestLeap/[Uu]ser[Ss]ettings/
 TestLeap/[Aa]ssets/ML-Agents/
 
-
-
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
