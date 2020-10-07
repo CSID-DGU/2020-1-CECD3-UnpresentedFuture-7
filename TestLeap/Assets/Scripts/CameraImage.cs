@@ -12,6 +12,7 @@ public class CameraImage : MonoBehaviour {
     private int currentIndex = 0;
 
     public Text Warning;
+    public GameObject WarningImage;
 
     private float _timeout = 3f;
 
@@ -95,12 +96,13 @@ public class CameraImage : MonoBehaviour {
         int count = 0;
         while (count < 3) {
             Warning.text = "전방을 주의하세요";
+            WarningImage.SetActive(true);
             yield return new WaitForSeconds (0.5f);
             Warning.text = "";
+            WarningImage.SetActive(false);
             yield return new WaitForSeconds (0.5f);
             count++;
         }
         flag = true;
     }
-
 }
