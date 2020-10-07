@@ -2,10 +2,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-<<<<<<< HEAD
-=======
 
->>>>>>> 875b2e8f4819a4ea92848ad772894753d57a20c0
 TestLeap/[Ll]ibrary/
 TestLeap/[Tt]emp/
 TestLeap/[Oo]bj/
@@ -13,12 +10,8 @@ TestLeap/[Bb]uild/
 TestLeap/[Bb]uilds/
 TestLeap/[Ll]ogs/
 TestLeap/[Uu]ser[Ss]ettings/
-<<<<<<< HEAD
-=======
+TestLeap/[Aa]ssets/ML-Agents/
 
-
-
->>>>>>> 875b2e8f4819a4ea92848ad772894753d57a20c0
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -93,4 +86,3 @@ crashlytics-build.properties
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
-
