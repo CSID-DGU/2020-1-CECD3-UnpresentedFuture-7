@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using Vuforia;
 
 public class CameraImage : MonoBehaviour {
     WebCamTexture webcamTexture;
@@ -24,7 +23,6 @@ public class CameraImage : MonoBehaviour {
         webcamTexture = new WebCamTexture();
         image = GetComponent<RawImage>();
         image.texture = webcamTexture;
-        //webcamTexture.Play();
 
         WebCamDevice[] devices = WebCamTexture.devices;
 
@@ -47,40 +45,15 @@ public class CameraImage : MonoBehaviour {
         webcamTexture.Play();
 
         Warning.text = "";
-
-        
     }
 
     void Update()
     {
-        if (ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) {
-            if (flag) {
-                flag = false;
-                StartCoroutine(BlinkText());
-            }
+        if ((ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) && flag) {
+            flag = false;
+            ObjectDetection.detectedObject = "";
+            StartCoroutine(BlinkText());
         }
-        else {
-            Warning.text = "";
-        }
-
-        // if (ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) {
-        //     flag = true;
-        // }
-
-        // if (_timeout > 2f && flag) {
-        //     Warning.text = "전방을 주의하세요";
-        //     _timeout -= Time.deltaTime;
-        // }
-
-        // if (ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) {
-        //     if (_timeout == 3f) {
-        //         Warning.text = "전방을 주의하세요";
-                
-        //     }
-        // }
-        // else {
-        //     Warning.text = "";
-        // }
     }
 
     public Color32[] ProcessImage() {
@@ -104,5 +77,14 @@ public class CameraImage : MonoBehaviour {
             count++;
         }
         flag = true;
+    }
+
+    void OnApplicationQuit() {
+        if (webcamTexture != null)
+        {
+            webcamTexture.Stop();
+            WebCamTexture.Destroy(webcamTexture);
+            webcamTexture = null;
+        }
     }
 }
