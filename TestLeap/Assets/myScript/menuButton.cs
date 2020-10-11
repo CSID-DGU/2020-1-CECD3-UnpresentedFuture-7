@@ -63,7 +63,7 @@ public class menuButton : MonoBehaviour
         Debug.Log("why not react...");
         controller.score = 0;
         controller.level = 1;
-
+        
         SceneManager.LoadScene("punch");
     }
 }

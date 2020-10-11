@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 
 public class ObjectDetection : MonoBehaviour {
-    public static string detectedObject;
+    public static string detectedObject = "";
 
     [Header("Constants")]
     private const float MIN_SCORE = .25f;
@@ -107,8 +107,6 @@ public class ObjectDetection : MonoBehaviour {
                             // 인식한 물체 출력
                             Debug.Log(catalogItem.DisplayName);
                             detectedObject = catalogItem.DisplayName;
-
-                            
                         }
                     }
                 }

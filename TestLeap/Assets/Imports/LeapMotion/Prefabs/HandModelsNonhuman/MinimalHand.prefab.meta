@@ -3,5 +3,8 @@ guid: 95a8b1228f1034c8f9070761f4f13b21
 labels:
 - Hand
 - Skeletal
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

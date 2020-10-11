@@ -6,5 +6,8 @@ labels:
 - Controller
 - LeapMotion
 - V2
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

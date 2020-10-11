@@ -3,5 +3,8 @@ guid: 368ede197811445f9b84f8ade38f75cd
 labels:
 - Hand
 - Poly
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
