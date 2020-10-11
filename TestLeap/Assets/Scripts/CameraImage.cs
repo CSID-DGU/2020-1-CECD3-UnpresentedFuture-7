@@ -51,7 +51,7 @@ public class CameraImage : MonoBehaviour {
         }
 
         WebCamDevice device = WebCamTexture.devices[currentIndex];
-        webcamTexture = new WebCamTexture(device.name);
+        webcamTexture = new WebCamTexture(device.name, Screen.width, Screen.height);
         display.material.mainTexture = webcamTexture;
         webcamTexture.Play();
 
