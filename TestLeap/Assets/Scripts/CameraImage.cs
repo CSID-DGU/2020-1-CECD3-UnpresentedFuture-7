@@ -30,7 +30,17 @@ public class CameraImage : MonoBehaviour {
         {
             Debug.Log(i+devices[i].name);
         }
-
+        for (int i = 0; i < devices.Length; i++)
+        {
+            if (devices[i].name.Contains("Leap"))
+            {
+                currentIndex++;
+            }
+            else
+            {
+                break;
+            }
+        }
 
         if (webcamTexture != null)
         {
@@ -40,7 +50,7 @@ public class CameraImage : MonoBehaviour {
         }
 
         WebCamDevice device = WebCamTexture.devices[currentIndex];
-        webcamTexture = new WebCamTexture(device.name);
+        webcamTexture = new WebCamTexture(device.name, Screen.width, Screen.height);
         display.material.mainTexture = webcamTexture;
         webcamTexture.Play();
 
