@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TestLeap/Library/PackageCache/com.unity.textmeshpro@1.4.1/Scripts.meta
 guid: e6a1d1e3d2384453a7371b4a07a41ca4
+=======
+guid: b6f3df1968d0f4141ba27197e709895f
+>>>>>>> 055c92c2931ff3b5374d91681b39d07d99d41e3e:TestLeap/Assets/GoogleVR/Scripts/Controller/Internal/Emulator.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

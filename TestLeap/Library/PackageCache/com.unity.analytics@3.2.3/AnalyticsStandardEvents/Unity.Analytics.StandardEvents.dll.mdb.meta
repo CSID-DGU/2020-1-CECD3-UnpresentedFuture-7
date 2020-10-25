@@ -1,7 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TestLeap/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll.mdb.meta
 guid: 36e8bb3feb5e6402185947b817a6ed8d
+=======
+guid: de961e46abe24453a81bf1c8576885b3
+>>>>>>> 055c92c2931ff3b5374d91681b39d07d99d41e3e:TestLeap/Assets/GoogleVR/README.meta
 DefaultImporter:
-  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

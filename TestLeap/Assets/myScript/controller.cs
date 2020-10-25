@@ -45,7 +45,7 @@ public class controller : MonoBehaviour
         // oncam();
 
         heart = 30f;
-        original_p = new Vector3(0.0f, 5.0f, 10f);
+        original_p = new Vector3(0.0f, 0.0f, 10.0f);
         StartCoroutine(continueing());
         delayTime = 3.0f;
 
@@ -90,9 +90,9 @@ public class controller : MonoBehaviour
 
     void instantiate_Prefab(GameObject Prefab)
     {
-        Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-15f, 20f),
+        Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-15f, 15f),
                                             original_p.y + Random.Range(-5f, 5f),
-                                            original_p.z + Random.Range(-40f, 20f)),
+                                            original_p.z + Random.Range(30f, 40f)),
                                             Quaternion.identity);
     }
 
