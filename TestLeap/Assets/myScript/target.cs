@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class target : MonoBehaviour
 {
+
     Rigidbody r;
     Vector3 target_b;
     Vector3 original_p;
@@ -19,8 +20,24 @@ public class target : MonoBehaviour
          private Vector3 LastPos;
     public Vector3 CurrentSpeed;// { get; private set; }
                                 // Start is called before the first frame update
+
+
+
+
+
+
+
+
+    
     void Start()
     {
+
+       
+   
+
+
+
+
     LastPos = transform.position;
     CurrentSpeed = transform.position;
 // 속도 측정 준비
@@ -92,6 +109,7 @@ switch(controller.mode){
     case 1:
         if(CurrentSpeed.magnitude>10){
         hp -= 1;
+
         Debug.Log("----------------------------------------------------10 이상 성공 normal "+CurrentSpeed.magnitude);
         }
     break;
@@ -103,10 +121,13 @@ switch(controller.mode){
     break;
     default :
      Debug.Log("------------------------------------------------------------ 성공 easy  "+CurrentSpeed.magnitude);
-        hp -= 1;
+
+
+        hp -= 1;    
         break;
 }
-
+     controller.myAudio.Stop();
+  controller.myAudio.Play(); 
            
             switch (hp)
             {

@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using Vuforia;
+
 
 public class CameraImage : MonoBehaviour {
     WebCamTexture webcamTexture;
     RawImage image;
     public Renderer display;
     private int currentIndex = 0;
-
     public Text Warning;
-
     private float _timeout = 3f;
 
     bool flag = true;
-
-    void Start() {
+WebCamDevice[] devices ;
+    void Start() {  
         //delay initialize camera
         
         webcamTexture = new WebCamTexture();
@@ -25,33 +23,41 @@ public class CameraImage : MonoBehaviour {
         image.texture = webcamTexture;
         //webcamTexture.Play();
 
-        WebCamDevice[] devices = WebCamTexture.devices;
-
+         devices = WebCamTexture.devices;
         for (int i = 0; i < devices.Length; i++)
         {
             Debug.Log(i+devices[i].name);
         }
-
-
         if (webcamTexture != null)
         {
             display.material.mainTexture = null;
             webcamTexture.Stop();
             webcamTexture = null;
         }
+        // WebCamDevice device = WebCamTexture.devices[1];
+     
+        // webcamTexture = new WebCamTexture(device.name);
+        // display.material.mainTexture = webcamTexture;
 
-        WebCamDevice device = WebCamTexture.devices[currentIndex];
+        // webcamTexture.Play();
+        // Warning.text = "";
+
+      for(int i=0;i<devices.Length;i++){
+
+            Debug.Log(i+devices[i].name);
+        WebCamDevice device = WebCamTexture.devices[1];
         webcamTexture = new WebCamTexture(device.name);
         display.material.mainTexture = webcamTexture;
         webcamTexture.Play();
-
         Warning.text = "";
-
-        
+            }
     }
 
     void Update()
     {
+      
+
+        
         if (ObjectDetection.detectedObject.Equals("person") || ObjectDetection.detectedObject.Equals("bicycle") || ObjectDetection.detectedObject.Equals("car")) {
             if (flag) {
                 flag = false;

@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftHands:
-  - {fileID: 11400000, guid: 9ae8a8acf486840e19397b18a914d915, type: 3}
+  - {fileID: 11400004, guid: 704f5d64b4ac849cbb1d88b6a50f0975, type: 3}
   - {fileID: 11400004, guid: 704f5d64b4ac849cbb1d88b6a50f0975, type: 3}
   - {fileID: 11400010, guid: 7d0286b4b0dbe40248b3fe201ba8adf5, type: 3}
   - {fileID: 11400000, guid: 368ede197811445f9b84f8ade38f75cd, type: 3}
@@ -91,7 +91,7 @@ MonoBehaviour:
   - {fileID: 11400008, guid: 0ea7bf4e24d0846e2b245290bf408e4d, type: 3}
   - {fileID: 11400010, guid: 95a8b1228f1034c8f9070761f4f13b21, type: 3}
   rightHands:
-  - {fileID: 11400010, guid: 0c6c9cacc3ef1487daa06cb206b2f421, type: 3}
+  - {fileID: 11400010, guid: 7a511c744b475498891a2b1acc35e348, type: 3}
   - {fileID: 11400010, guid: 7a511c744b475498891a2b1acc35e348, type: 3}
   - {fileID: 11400010, guid: 7d0286b4b0dbe40248b3fe201ba8adf5, type: 3}
   - {fileID: 11400000, guid: 368ede197811445f9b84f8ade38f75cd, type: 3}

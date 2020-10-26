@@ -39,9 +39,18 @@ public class controller : MonoBehaviour
     // Start is called before the first frame update
 
 
+
+// sound target
+  public static AudioClip soundExplosion; //재생할 소리를 변수로 담습니다.
+    public static AudioSource myAudio; //AudioSorce 컴포넌트를 변수로 담습니다.
+    //public static soundManager instance;  //자기자신을 변수로 담습니다.
+
+
+
     void Start()
     {
-
+     myAudio = this.gameObject.GetComponent<AudioSource>();
+     myAudio.Play();
         // oncam();
 
         heart = 30f;
