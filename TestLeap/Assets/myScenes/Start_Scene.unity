@@ -516,6 +516,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13100000, guid: 5a6d55d79253c4a82a441dcac4585afb, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 3d540915f5ab1bc43ad1668c4affdace, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a6d55d79253c4a82a441dcac4585afb, type: 3}
 --- !u!1 &740050987
@@ -1986,7 +1990,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Boxing Game
+  m_Text: AR Boxing Game
 --- !u!222 &1909645859
 CanvasRenderer:
   m_ObjectHideFlags: 0
