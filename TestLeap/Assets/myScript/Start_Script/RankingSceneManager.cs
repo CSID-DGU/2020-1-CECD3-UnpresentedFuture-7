@@ -15,7 +15,8 @@ public class RankingSceneManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "hand")
         {
-            Game_Ranking();
+                    hitsound_start.hitSound();
+            Invoke("Game_Ranking",0.3f);
         }
     }
 }

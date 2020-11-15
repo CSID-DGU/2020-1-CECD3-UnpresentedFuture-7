@@ -18,7 +18,9 @@ public class EasyModeScene : MonoBehaviour
     {
         if (collision.gameObject.tag == "hand")
         {
-            Game_Start();
+            hitsound.hitSound();
+            Invoke("Game_Start",0.3f);
+           // Game_Start();
         }
     }
 }
