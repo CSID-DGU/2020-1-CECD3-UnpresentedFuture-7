@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class gloves : MonoBehaviour
-{   private GameObject hand;
-    private bool glovein=false;
-    private Vector3 originposition;
-    Vector3 Offset;
+{       private Vector3 LastPos;
+    public Vector3 CurrentSpeed;
     // Start is called before the first frame update
     void Start()
     {
-        originposition=transform.position;
-        
+        LastPos = transform.position;
+        CurrentSpeed = transform.position;
       
         //Offset = transform.position - hand.transform.position;
        // Offset =  hand.transform.position-transform.position;
@@ -21,11 +19,10 @@ public class gloves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position = hand.transform.position+Offset;
-       // hand.transform.position=transform.position +Offset;
-        if(glovein){ 
-            transform.position=hand.transform.position;
-            }
+Vector3 displacement = transform.position - LastPos;
+        CurrentSpeed = displacement / Time.deltaTime;
+        // Debug.Log(CurrentSpeed.magnitude);
+        LastPos = transform.position;
          
     
     }
@@ -38,20 +35,49 @@ public class gloves : MonoBehaviour
 
         // }
         
-        void OnTriggerStay(Collider other){
+        private void OnCollisionEnter(Collision collision)
+    {
+       GameObject a=collision.gameObject;
+       target tar=a.GetComponent<target>();
+       
 
-    
-    hand=other.gameObject;
-     Debug.Log("hand : "+hand.tag);
-        
-        if(hand.tag=="glove"){
-        transform.position=originposition;
-        return;
+        // Hand 객체와 충돌 시 타격 오브젝트 파괴
+        if (collision.gameObject.tag == "target")
+        {
+
+            Debug.Log("coll speed in target script : " + CurrentSpeed.magnitude);
+
+            switch (controller.mode)
+            {
+                case 1:
+                    if (CurrentSpeed.magnitude > 4)
+                    {
+                               tar.hp-=1;
+                      controller.ishit=true;
+                        Debug.Log("----------------------------------------------------5 이상 성공 normal " + CurrentSpeed.magnitude);
+                    }
+                    break;
+                case 2:
+                    if (CurrentSpeed.magnitude > 6)
+                    {
+                              tar.hp-=1;
+                        Debug.Log("------------------------------------------------------------7이상 성공 hard  " + CurrentSpeed.magnitude);
+                    }
+                    break;
+                default:
+                       tar.hp-=1;
+                    Debug.Log("------------------------------------------------------------ 성공 easy  " + CurrentSpeed.magnitude);
+                  
+                    break;
+            }
+
+
+
+
+
+
+            Debug.Log("collision : " + collision.gameObject.tag);
         }
-         else if(hand.tag=="hand"){ 
-             transform.position=hand.transform.position;
-             glovein=true;
-        }
-        }
+    }
 
 }

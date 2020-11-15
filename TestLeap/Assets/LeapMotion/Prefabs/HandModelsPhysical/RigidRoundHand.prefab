@@ -1015,6 +1015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460566}
   - component: {fileID: 11460532}
+  - component: {fileID: 3195454227017634565}
   m_Layer: 0
   m_Name: ring
   m_TagString: hand
@@ -1062,6 +1063,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+--- !u!114 &3195454227017634565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26abbe14fe8680948bffc8074c74b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentSpeed: {x: 0, y: 0, z: 0}
 --- !u!1 &160566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460568}
   - component: {fileID: 11460534}
+  - component: {fileID: 6623679891543189645}
   m_Layer: 0
   m_Name: pinky
   m_TagString: hand
@@ -1119,6 +1134,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+--- !u!114 &6623679891543189645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26abbe14fe8680948bffc8074c74b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentSpeed: {x: 0, y: 0, z: 0}
 --- !u!1 &160568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460570}
   - component: {fileID: 11460536}
+  - component: {fileID: 5922200277174684509}
   m_Layer: 0
   m_Name: middle
   m_TagString: hand
@@ -1176,6 +1205,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+--- !u!114 &5922200277174684509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26abbe14fe8680948bffc8074c74b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentSpeed: {x: 0, y: 0, z: 0}
 --- !u!1 &160570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460572}
   - component: {fileID: 11460538}
+  - component: {fileID: 7285679883666319420}
   m_Layer: 0
   m_Name: index
   m_TagString: hand
@@ -1233,6 +1276,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+--- !u!114 &7285679883666319420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26abbe14fe8680948bffc8074c74b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentSpeed: {x: 0, y: 0, z: 0}
 --- !u!1 &160572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460574}
   - component: {fileID: 11460540}
+  - component: {fileID: 9137006311856366357}
   m_Layer: 0
   m_Name: thumb
   m_TagString: hand
@@ -1290,6 +1347,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+--- !u!114 &9137006311856366357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26abbe14fe8680948bffc8074c74b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentSpeed: {x: 0, y: 0, z: 0}
 --- !u!1 &160574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,6 +1371,7 @@ GameObject:
   - component: {fileID: 460562}
   - component: {fileID: 5460532}
   - component: {fileID: 13699206}
+  - component: {fileID: 5400263202804305686}
   m_Layer: 0
   m_Name: forearm
   m_TagString: hand
@@ -1352,6 +1423,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5400263202804305686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26abbe14fe8680948bffc8074c74b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentSpeed: {x: 0, y: 0, z: 0}
 --- !u!1 &160576
 GameObject:
   m_ObjectHideFlags: 0
