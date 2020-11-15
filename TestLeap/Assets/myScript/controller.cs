@@ -92,9 +92,9 @@ public class controller : MonoBehaviour
         //                                     original_p.y + Random.Range(-5f, 5f),
         //                                     original_p.z + Random.Range(30f, 40f)),
         //                                     Quaternion.identity);
-        Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-15f, 20f),
+        Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-20f, 25f),
                                             original_p.y + Random.Range(-5f, 5f),
-                                            original_p.z + Random.Range(-40f, 20f)),
+                                            original_p.z + Random.Range(-45f, 25f)),
                                             Quaternion.identity);
     }
 
@@ -112,14 +112,14 @@ public class controller : MonoBehaviour
             {
                 instantiate_Prefab(Chili);
                 instantiate_Prefab(Eggy);
-                delay = 2.0f;
+                delay = 3.0f;
 
             }
             if (level > 9)
             {
                 instantiate_Prefab(Langsat);
                 instantiate_Prefab(Slime);
-                delay = 2.5f;
+                delay = 5f;
             }
             yield return new WaitForSeconds(delay);
         }
