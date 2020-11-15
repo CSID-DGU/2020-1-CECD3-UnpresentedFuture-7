@@ -7,13 +7,7 @@ public class GameResetBtn : MonoBehaviour
 {
     public void Game_Reset()
     {
-        Debug.Log("Game Reset...@");
-        Time.timeScale = 1f;
-        controller.heart = 30f;
-        controller.score = 0;
-        controller.level = 1;
-        
-        SceneManager.LoadScene("punch");
+        SceneManager.LoadScene("Start_Scene");
     }
 
     private void OnCollisionEnter(Collision collision)
