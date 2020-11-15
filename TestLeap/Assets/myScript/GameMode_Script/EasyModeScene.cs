@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameModeSceneManager : MonoBehaviour
+public class EasyModeScene : MonoBehaviour
 {
     //게임 화면으로 씬 이동
     public void Game_Start()

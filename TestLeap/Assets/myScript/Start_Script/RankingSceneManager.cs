@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameModeSceneManager : MonoBehaviour
+public class RankingSceneManager : MonoBehaviour
 {
     //게임 화면으로 씬 이동
-    public void Game_Start()
+    public void Game_Ranking()
     {
-        controller.score = 0;
-        controller.level = 1;
-        controller.mode = 0;
-        SceneManager.LoadScene("punch");
+        SceneManager.LoadScene("Ranking_Scene");
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "hand")
         {
-            Game_Start();
+            Game_Ranking();
         }
     }
 }

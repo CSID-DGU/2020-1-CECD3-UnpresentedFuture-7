@@ -178,8 +178,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 1000
-  m_fontSizeBase: 1000
+  m_fontSize: 800
+  m_fontSizeBase: 800
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -461,8 +461,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 1000
-  m_fontSizeBase: 1000
+  m_fontSize: 800
+  m_fontSizeBase: 800
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -669,8 +669,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 1000
-  m_fontSizeBase: 1000
+  m_fontSize: 800
+  m_fontSizeBase: 800
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 673950815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5626e87b62d1314ea80926ae74f725a, type: 3}
+  m_Script: {fileID: 11500000, guid: 293bb858774d8194cab842954f6ac22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &673950817
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1064157506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5626e87b62d1314ea80926ae74f725a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b4b47fc1e3672147a60e2a1cf8cfdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &1064157508
@@ -1183,7 +1183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5a6d55d79253c4a82a441dcac4585afb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5a6d55d79253c4a82a441dcac4585afb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561464803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5626e87b62d1314ea80926ae74f725a, type: 3}
+  m_Script: {fileID: 11500000, guid: e967afde255cf274a9506bd33f28657a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!136 &1561464805

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameModeSceneManager : MonoBehaviour
+public class HardModeScene : MonoBehaviour
 {
     //게임 화면으로 씬 이동
     public void Game_Start()
     {
         controller.score = 0;
         controller.level = 1;
-        controller.mode = 0;
+        controller.mode = 2;
         SceneManager.LoadScene("punch");
     }
 
