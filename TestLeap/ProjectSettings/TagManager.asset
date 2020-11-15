@@ -10,6 +10,7 @@ TagManager:
   - glove
   - finger
   - palm
+  - bound
   layers:
   - Default
   - TransparentFX

@@ -72,9 +72,11 @@ public class target : MonoBehaviour
         //  targettmp = GameObject.FindGameObjectWithTag("target");
         //    target_b = targettmp.transform.position;
 
-        // 타격 오브젝트 이동
+        // // 타격 오브젝트 이동
         transform.position = Vector3.MoveTowards(transform.position, target_b, target_speed * Time.deltaTime);
         // 지정된 위치에 타격 오브젝트 도착시 객체 소멸
+
+       
         if (transform.position == target_b)
         {
             this.gameObject.SetActive(false);
@@ -89,6 +91,15 @@ controller.myAudio.Play();
     }
     private void OnCollisionEnter(Collision collision)
     {
+
+        if(collision.gameObject.tag=="bound"){
+            this.gameObject.SetActive(false);
+            controller.heart -= this.hp;
+            Destroy(this.gameObject);
+        }
+
+
+
         // Hand 객체와 충돌 시 타격 오브젝트 파괴
         if (collision.gameObject.tag == "hand")
         {
