@@ -3640,7 +3640,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1019410614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1a8db43a440f493fac5ab8817abd8f2, type: 3}
+  m_Script: {fileID: 11500000, guid: d05cfd4c2aff7db43baac6464c6648b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   display: {fileID: 1019410621}
@@ -4622,6 +4622,7 @@ GameObject:
   - component: {fileID: 1228010251}
   - component: {fileID: 1228010250}
   - component: {fileID: 1228010247}
+  - component: {fileID: 1228010252}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4709,6 +4710,14 @@ Behaviour:
   m_Enabled: 1
 --- !u!124 &1228010251
 Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228010246}
+  m_Enabled: 1
+--- !u!81 &1228010252
+AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5256,11 +5265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf46bae76df0e4536a0c7419de75f4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraImage: {fileID: 1019410619}
-  labelMap: {fileID: 4900000, guid: 3c4c74b6fb0a84b32903936a5ab7c544, type: 3}
-  model: {fileID: 4900000, guid: 735d39e0ba17e470e8026d72623758a0, type: 3}
-  objectColor: {r: 0, g: 0, b: 0, a: 0}
-  tex: {fileID: 2800000, guid: df58f449810c548818d4f841d9b683f9, type: 3}
 --- !u!4 &1332925932
 Transform:
   m_ObjectHideFlags: 0
