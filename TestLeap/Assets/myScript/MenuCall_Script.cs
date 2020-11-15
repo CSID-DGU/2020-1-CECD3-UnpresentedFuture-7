@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class MenuCall_Script : MonoBehaviour
 {
-    [SerializeField] GameObject menuCanvas;
+    [SerializeField] GameObject menu;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -16,7 +16,7 @@ public class MenuCall_Script : MonoBehaviour
             this.gameObject.SetActive(false);
             Destroy(this.gameObject);
 
-            menuCanvas.SetActive(true);
+            menu.SetActive(true);
         }
     }
 }
