@@ -11,7 +11,7 @@ public class target : MonoBehaviour
     Vector3 original_p;
 
     GameObject targettmp;//---------------------------------------0618 성두
-    int hp;
+    public int hp;
     int maxhp;
     float target_speed;
     Renderer renderer;
@@ -19,6 +19,8 @@ public class target : MonoBehaviour
     private Vector3 LastPos;
     public Vector3 CurrentSpeed;// { get; private set; }
                                 // Start is called before the first frame update
+
+    public void reduce(){}
     void Start()
     {
         LastPos = transform.position;
@@ -81,35 +83,40 @@ public class target : MonoBehaviour
         }
 
     }
+    private void soundplay(){
+        controller.myAudio.Stop();
+controller.myAudio.Play(); 
+    }
     private void OnCollisionEnter(Collision collision)
     {
         // Hand 객체와 충돌 시 타격 오브젝트 파괴
         if (collision.gameObject.tag == "hand")
         {
 
-            Debug.Log("coll speed in target script : " + CurrentSpeed.magnitude);
+           // Debug.Log("coll speed in target script : " + CurrentSpeed.magnitude);
 
-            switch (controller.mode)
-            {
-                case 1:
-                    if (CurrentSpeed.magnitude > 10)
-                    {
-                        hp -= 1;
-                        Debug.Log("----------------------------------------------------10 이상 성공 normal " + CurrentSpeed.magnitude);
-                    }
-                    break;
-                case 2:
-                    if (CurrentSpeed.magnitude > 20)
-                    {
-                        hp -= 1;
-                        Debug.Log("------------------------------------------------------------20이상 성공 hard  " + CurrentSpeed.magnitude);
-                    }
-                    break;
-                default:
-                    Debug.Log("------------------------------------------------------------ 성공 easy  " + CurrentSpeed.magnitude);
-                    hp -= 1;
-                    break;
-            }
+            // switch (controller.mode)
+            // {
+            //     case 1:
+            //         if (CurrentSpeed.magnitude > 10)
+            //         {soundplay();
+            //             hp -= 1;
+            //             //Debug.Log("----------------------------------------------------10 이상 성공 normal " + CurrentSpeed.magnitude);
+            //         }
+            //         break;
+            //     case 2:
+            //         if (CurrentSpeed.magnitude > 20)
+            //         {soundplay();
+            //             hp -= 1;
+            //             //Debug.Log("------------------------------------------------------------20이상 성공 hard  " + CurrentSpeed.magnitude);
+            //         }
+            //         break;
+            //     default:
+            //     soundplay();
+            //        // Debug.Log("------------------------------------------------------------ 성공 easy  " + CurrentSpeed.magnitude);
+            //         hp -= 1;
+            //         break;
+            // }
 
 
             switch (hp)

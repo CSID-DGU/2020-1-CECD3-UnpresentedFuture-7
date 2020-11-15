@@ -7,7 +7,7 @@ public class controller : MonoBehaviour
 {
 
     public Text score_text;
-    public Text level_text;
+    // public Text level_text;
 
     // public static bool isglovedRight=false;//글러브 추가 성두
     // public static bool isglovedLeft=false;//글러브 추가 성두
@@ -35,13 +35,17 @@ public class controller : MonoBehaviour
     public float delayTime;
     public static int mode = 0; // 0/1/2 : 각각 easy/normal/hard
     public Canvas mode_canvas;
-
+    public static bool ishit=false;
     // Start is called before the first frame update
+    public static AudioClip soundExplosion; 
+public static AudioSource myAudio; 
 
 
     void Start()
     {
 
+myAudio = this.gameObject.GetComponent<AudioSource>();
+myAudio.Stop();
         // oncam();
 
         heart = 30f;
@@ -84,15 +88,19 @@ public class controller : MonoBehaviour
 
 
         score_text.text = "score : " + score;   // 점수 갱신
-        level_text.text = "Lv : " + level;   // 점수 갱신
+        // level_text.text = "Lv : " + level;   // 점수 갱신
     }
 
 
     void instantiate_Prefab(GameObject Prefab)
     {
-        Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-15f, 15f),
+        // Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-15f, 15f),
+        //                                     original_p.y + Random.Range(-5f, 5f),
+        //                                     original_p.z + Random.Range(30f, 40f)),
+        //                                     Quaternion.identity);
+        Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-15f, 20f),
                                             original_p.y + Random.Range(-5f, 5f),
-                                            original_p.z + Random.Range(30f, 40f)),
+                                            original_p.z + Random.Range(-40f, 20f)),
                                             Quaternion.identity);
     }
 
