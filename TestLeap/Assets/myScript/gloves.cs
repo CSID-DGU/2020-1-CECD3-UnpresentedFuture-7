@@ -54,17 +54,18 @@ Vector3 displacement = transform.position - LastPos;
                     {
                                tar.hp-=1;
                       controller.ishit=true;
+                      controller.myAudio.Play(); 
                         Debug.Log("----------------------------------------------------5 이상 성공 normal " + CurrentSpeed.magnitude);
                     }
                     break;
                 case 2:
                     if (CurrentSpeed.magnitude > 6)
-                    {
+                    {    controller.myAudio.Play(); 
                               tar.hp-=1;
                         Debug.Log("------------------------------------------------------------7이상 성공 hard  " + CurrentSpeed.magnitude);
                     }
                     break;
-                default:
+                default:    controller.myAudio.Play(); 
                        tar.hp-=1;
                     Debug.Log("------------------------------------------------------------ 성공 easy  " + CurrentSpeed.magnitude);
                   
