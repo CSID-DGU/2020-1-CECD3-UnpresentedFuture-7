@@ -5,6 +5,7 @@
 \******************************************************************************/
 
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using Leap;
 
@@ -27,6 +28,8 @@ public class DisconnectionNotice : MonoBehaviour {
   public Texture2D embeddedReplacementImage;
   /** The fully on texture tint color. */
   public Color onColor = Color.white;
+
+  public Text Notice;
 
   private Controller leap_controller_;
   private float fadedIn = 0.0f;
