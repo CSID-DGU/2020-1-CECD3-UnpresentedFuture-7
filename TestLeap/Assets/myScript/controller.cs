@@ -111,7 +111,7 @@ public class controller : MonoBehaviour
         //                                     Quaternion.identity);
         Instantiate(Prefab, new Vector3(original_p.x + Random.Range(-20f, 25f),
                                             original_p.y + Random.Range(-5f, 5f),
-                                            original_p.z + Random.Range(-45f, 25f)),
+                                            original_p.z + Random.Range(-0f, 25f)),
                                             Quaternion.identity);
     }
 
@@ -119,23 +119,25 @@ public class controller : MonoBehaviour
     {
         while (true)
         {
+            bool levelparam=level%2==0;
             float delay = delayTime / level;
             // 랜덤한 위치에 따라 타격 오브젝트 생성
             if (delay < 1.5f) { delay = 1.5f; }
-            instantiate_Prefab(Turtle);
-            instantiate_Prefab(Kiwi);
+
+            if(levelparam) instantiate_Prefab(Turtle);
+            else instantiate_Prefab(Kiwi);
 
             if (level > 4)
             {
-                instantiate_Prefab(Chili);
-                instantiate_Prefab(Eggy);
+                if(levelparam) instantiate_Prefab(Chili);
+                else instantiate_Prefab(Eggy);
                 delay = 3.0f;
 
             }
             if (level > 9)
             {
-                instantiate_Prefab(Langsat);
-                instantiate_Prefab(Slime);
+                if(levelparam) instantiate_Prefab(Langsat);
+                else instantiate_Prefab(Slime);
                 delay = 5f;
             }
             yield return new WaitForSeconds(delay);

@@ -34,12 +34,12 @@ public class API : MonoBehaviour
         //print("NAME: " + temp.userName + "SCORE: " + temp.score + "ID: " + temp.id);
     }
 
-    public DatabaseReference reference { get; set; }
+    public DatabaseReference reference { get; set; } 
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     void Reset()
     {
@@ -53,7 +53,7 @@ public class API : MonoBehaviour
     public void addNewUser(string userName, double score, double id)
     {
         print("addUser!");
-
+        
         DateTime dt2 = new DateTime();
         dt2 = DateTime.Now;
 
@@ -63,7 +63,7 @@ public class API : MonoBehaviour
         string json = JsonUtility.ToJson(user);
 
         print(reference);
-
+       
         reference.Child("Users").Child(id.ToString()).SetRawJsonValueAsync(json);
     }
 
@@ -94,13 +94,12 @@ public class API : MonoBehaviour
                     MyUser.score = Convert.ToInt32("" + user["score"]);
                     MyUser.id = Convert.ToInt32("" + user["id"]);
                     MyUser.dateString = "" + user["dateString"];
-
+                    
                     users.Add(MyUser);
                 }
                 callback.Invoke(users.ToArray());
 
-            }
-            else
+            } else
             {
                 Debug.Log("false");
                 print("false");
@@ -116,14 +115,14 @@ public class API : MonoBehaviour
         FirebaseDatabase.DefaultInstance.GetReference("Users")
             .OrderByChild("id").EqualTo(id).GetValueAsync().ContinueWith(task =>
         {
-
+            
             if (task.IsCompleted)
             {
                 DataSnapshot snapShot = task.Result;
-
+   
                 print("the number of count is " + snapShot.ChildrenCount);
 
-                foreach (DataSnapshot data in snapShot.Children)
+                foreach(DataSnapshot data in snapShot.Children)
                 {
 
                     IDictionary user = (IDictionary)data.Value;
@@ -137,13 +136,12 @@ public class API : MonoBehaviour
                     MyUser.id = Convert.ToInt32("" + user["id"]);
                 }
 
-            }
-            else
+            } else
             {
                 Debug.Log("false");
                 print("false");
             }
-
+            
         });
 
         return MyUser;
