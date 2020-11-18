@@ -15,8 +15,8 @@ public class EndGameManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "hand")
         {
-                       hitsound_start.hitSound();
-            Invoke("Game_End",0.3f);
+            hitsound_start.hitSound();
+            Invoke("Game_End", 0.3f);
         }
     }
 }

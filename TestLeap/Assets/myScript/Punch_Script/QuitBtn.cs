@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameResetBtn : MonoBehaviour
+public class QuitBtn : MonoBehaviour
 {
     public void Game_Reset()
     {
-        SceneManager.LoadScene("punch");
+        SceneManager.LoadScene("Start_Scene");
     }
 
     private void OnCollisionEnter(Collision collision)
