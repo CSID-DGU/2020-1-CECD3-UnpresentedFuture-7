@@ -5,7 +5,6 @@ using UnityEngine;
 public class life_point : MonoBehaviour
 {
     private GameObject[] hearts;
-    [SerializeField]
     private API api;
     // Start is called before the first frame update
     void Start()

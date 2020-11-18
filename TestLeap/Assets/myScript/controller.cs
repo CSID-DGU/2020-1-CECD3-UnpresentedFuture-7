@@ -29,23 +29,24 @@ public class controller : MonoBehaviour
     public Canvas menu;
 
     private bool isopen = false;
-    public Canvas menu_gameover;
+    public GameObject menu_gameover;
     private bool isover = false;
 
     public float delayTime;
     public static int mode = 0; // 0/1/2 : 각각 easy/normal/hard
-    public Canvas mode_canvas;
-    public static bool ishit=false;
+    [SerializeField] Text modeText;
+
+    public static bool ishit = false;
     // Start is called before the first frame update
-    public static AudioClip soundExplosion; 
-public static AudioSource myAudio; 
+    public static AudioClip soundExplosion;
+    public static AudioSource myAudio;
 
 
     void Start()
     {
 
-myAudio = this.gameObject.GetComponent<AudioSource>();
-myAudio.Stop();
+        myAudio = this.gameObject.GetComponent<AudioSource>();
+        myAudio.Stop();
         // oncam();
 
         heart = 30f;
@@ -53,20 +54,30 @@ myAudio.Stop();
         StartCoroutine(continueing());
         delayTime = 3.0f;
 
-        menu_gameover.enabled = false;
-        mode_canvas.enabled = false;
+        switch (mode)
+        {
+            case 0:
+                modeText.text = "Easy";
+                break;
+            case 1:
+                modeText.text = "Normal";
+                break;
+            case 2:
+                modeText.text = "Hard";
+                break;
+            default:
+                modeText.text = "There is some ERROR...";
+                break;
 
+        }
     }
     void Update()
     {
         heart -= Time.deltaTime;
         if (heart < 0)
         {
-            Time.timeScale = 0;
-
-            menu_gameover.enabled = true;
+            menu_gameover.SetActive(true);
             //Instantiate(menu);
-
         }
         if (Input.GetKeyDown("escape"))
         {
