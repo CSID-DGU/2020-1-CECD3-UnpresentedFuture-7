@@ -34,6 +34,8 @@ public class controller : MonoBehaviour
 
     public float delayTime;
     public static int mode = 0; // 0/1/2 : 각각 easy/normal/hard
+    [SerializeField] Text modeText;
+
     public static bool ishit = false;
     // Start is called before the first frame update
     public static AudioClip soundExplosion;
@@ -52,7 +54,22 @@ public class controller : MonoBehaviour
         StartCoroutine(continueing());
         delayTime = 3.0f;
 
+        switch (mode)
+        {
+            case 0:
+                modeText.text = "Easy";
+                break;
+            case 1:
+                modeText.text = "Normal";
+                break;
+            case 2:
+                modeText.text = "Hard";
+                break;
+            default:
+                modeText.text = "There is some ERROR...";
+                break;
 
+        }
     }
     void Update()
     {
