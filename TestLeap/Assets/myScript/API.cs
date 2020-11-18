@@ -53,11 +53,17 @@ public class API : MonoBehaviour
     public void addNewUser(string userName, double score, double id)
     {
         print("addUser!");
-        User user = new User(userName, score, id);
+        
+        DateTime dt2 = new DateTime();
+        dt2 = DateTime.Now;
+
+        String dateString = dt2.ToString("yyyy-MM-dd HH:mm:ss");
+
+        User user = new User(userName, score, id, dateString);
         string json = JsonUtility.ToJson(user);
 
         print(reference);
-
+       
         reference.Child("Users").Child(id.ToString()).SetRawJsonValueAsync(json);
     }
 
@@ -80,13 +86,14 @@ public class API : MonoBehaviour
                     User MyUser = new User();
                     IDictionary user = (IDictionary)data.Value;
                     //Debug.Log("NAME: " + user["userName"] + "SCORE: " + user["score"] + "ID: " + user["id"]);
-                    print("NAME: " + user["userName"] + "SCORE: " + user["score"] + "ID: " + user["id"]);
+                    print("NAME: " + user["userName"] + "SCORE: " + user["score"] + "ID: " + user["id"] + "DATE: " + user["dateString"]);
 
                     string name = "" + user["userName"];
 
                     MyUser.userName = "" + user["userName"];
                     MyUser.score = Convert.ToInt32("" + user["score"]);
                     MyUser.id = Convert.ToInt32("" + user["id"]);
+                    MyUser.dateString = "" + user["dateString"];
                     
                     users.Add(MyUser);
                 }
@@ -100,6 +107,7 @@ public class API : MonoBehaviour
         });
     }
 
+    //이것은 쓰지 않는함수라 업데이트하지 않았음
     public User getUserById(double id)
     {
         User MyUser = new User();
@@ -145,18 +153,21 @@ public class User
     public string userName;
     public double score;
     public double id;
+    public string dateString;
 
     public User()
     {
         this.userName = "NoName";
         this.score = 0;
         this.id = 0;
+        this.dateString = "2020-11-16 12:00:00";
     }
 
-    public User(string userName, double score, double id)
+    public User(string userName, double score, double id, string dateString)
     {
         this.userName = userName;
         this.score = score;
         this.id = id;
+        this.dateString = dateString;
     }
 }
