@@ -143,7 +143,7 @@ public class API : MonoBehaviour
         print("these are sorted datas by score");
 
         FirebaseDatabase.DefaultInstance.GetReference("Users")
-            .OrderByChild("scoreForSort").LimitToFirst(5).GetValueAsync().ContinueWith(task =>
+            .OrderByChild("scoreForSort").GetValueAsync().ContinueWith(task =>
         {
             List<User> users = new List<User>();
             if (task.IsCompleted)
