@@ -18,7 +18,7 @@ public class Mocker : MonoBehaviour
 
     void Start()
     {
-        users = new User[3];
+        users = new User[5];
         for (int i = 0; i < users.Length; i++)
         {
             users[i] = new User();

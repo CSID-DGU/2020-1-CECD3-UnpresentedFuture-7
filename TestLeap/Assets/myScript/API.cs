@@ -38,7 +38,7 @@ public class API : MonoBehaviour
         // Get the root reference location of the database.
         reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
-    public void addNewUser(string userName, double score, double id)
+    public void addNewUser(string userName, int score, int id)
     {
         print("addUser!");
 
@@ -143,14 +143,13 @@ public class API : MonoBehaviour
         print("these are sorted datas by score");
 
         FirebaseDatabase.DefaultInstance.GetReference("Users")
-            .OrderByChild("scoreForSort").LimitToFirst(3).GetValueAsync().ContinueWith(task =>
+            .OrderByChild("scoreForSort").LimitToFirst(5).GetValueAsync().ContinueWith(task =>
         {
             List<User> users = new List<User>();
             if (task.IsCompleted)
             {
                 DataSnapshot snapShot = task.Result;
                 
-
                 print("the number of count is " + snapShot.ChildrenCount);
 
                 foreach (DataSnapshot data in snapShot.Children)
@@ -184,9 +183,9 @@ public class API : MonoBehaviour
 public class User
 {
     public string userName;
-    public double score;
-    public double scoreForSort;
-    public double id;
+    public int score;
+    public int scoreForSort;
+    public int id;
     public string dateString;
 
     public User()
@@ -198,7 +197,7 @@ public class User
         this.dateString = "2020-11-16 12:00:00";
     }
 
-    public User(string userName, double score, double id, string dateString)
+    public User(string userName, int score, int id, string dateString)
     {
         this.userName = userName;
         this.score = score;

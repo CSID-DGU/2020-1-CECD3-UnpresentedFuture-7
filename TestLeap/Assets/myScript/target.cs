@@ -20,7 +20,7 @@ public class target : MonoBehaviour
     public Vector3 CurrentSpeed;// { get; private set; }
                                 // Start is called before the first frame update
 
-    public void reduce(){}
+    public void reduce() { }
     void Start()
     {
         LastPos = transform.position;
@@ -76,7 +76,7 @@ public class target : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target_b, target_speed * Time.deltaTime);
         // 지정된 위치에 타격 오브젝트 도착시 객체 소멸
 
-       
+
         if (transform.position == target_b)
         {
             this.gameObject.SetActive(false);
@@ -85,14 +85,16 @@ public class target : MonoBehaviour
         }
 
     }
-    private void soundplay(){
+    private void soundplay()
+    {
         controller.myAudio.Stop();
-controller.myAudio.Play(); 
+        controller.myAudio.Play();
     }
     private void OnCollisionEnter(Collision collision)
     {
 
-        if(collision.gameObject.tag=="bound"){
+        if (collision.gameObject.tag == "bound")
+        {
             this.gameObject.SetActive(false);
             controller.heart -= this.hp;
             Destroy(this.gameObject);
@@ -104,7 +106,7 @@ controller.myAudio.Play();
         if (collision.gameObject.tag == "hand")
         {
 
-           // Debug.Log("coll speed in target script : " + CurrentSpeed.magnitude);
+            // Debug.Log("coll speed in target script : " + CurrentSpeed.magnitude);
 
             // switch (controller.mode)
             // {

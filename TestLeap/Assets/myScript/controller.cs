@@ -41,9 +41,12 @@ public class controller : MonoBehaviour
     public static AudioClip soundExplosion;
     public static AudioSource myAudio;
 
+    private addNewRank newUser;
+    bool turnOff = false;
 
     void Start()
     {
+        newUser = this.GetComponent<addNewRank>();
 
         myAudio = this.gameObject.GetComponent<AudioSource>();
         myAudio.Stop();
@@ -76,8 +79,13 @@ public class controller : MonoBehaviour
         heart -= Time.deltaTime;
         if (heart < 0)
         {
-            menu_gameover.SetActive(true);
-            //Instantiate(menu);
+            if (turnOff == false)
+            {
+                turnOff = true;
+                newUser.addNew();
+                menu_gameover.SetActive(true);
+                //Instantiate(menu);
+            }
         }
         if (Input.GetKeyDown("escape"))
         {
@@ -98,7 +106,7 @@ public class controller : MonoBehaviour
         }
 
 
-        score_text.text = "score : " + score;   // 점수 갱신
+        score_text.text = score.ToString();   // 점수 갱신
         // level_text.text = "Lv : " + level;   // 점수 갱신
     }
 
@@ -119,24 +127,24 @@ public class controller : MonoBehaviour
     {
         while (true)
         {
-            bool levelparam=level%2==0;
+            bool levelparam = level % 2 == 0;
             float delay = delayTime / level;
             // 랜덤한 위치에 따라 타격 오브젝트 생성
             if (delay < 1.5f) { delay = 1.5f; }
 
-            if(levelparam) instantiate_Prefab(Turtle);
+            if (levelparam) instantiate_Prefab(Turtle);
             else instantiate_Prefab(Kiwi);
 
             if (level > 4)
             {
-                if(levelparam) instantiate_Prefab(Chili);
+                if (levelparam) instantiate_Prefab(Chili);
                 else instantiate_Prefab(Eggy);
                 delay = 3.0f;
 
             }
             if (level > 9)
             {
-                if(levelparam) instantiate_Prefab(Langsat);
+                if (levelparam) instantiate_Prefab(Langsat);
                 else instantiate_Prefab(Slime);
                 delay = 5f;
             }
