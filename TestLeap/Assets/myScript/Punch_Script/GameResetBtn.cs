@@ -7,7 +7,7 @@ public class GameResetBtn : MonoBehaviour
 {
     public void Game_Reset()
     {
-        SceneManager.LoadScene("punch");
+        SceneManager.LoadScene("Start_Scene");
     }
 
     private void OnCollisionEnter(Collision collision)

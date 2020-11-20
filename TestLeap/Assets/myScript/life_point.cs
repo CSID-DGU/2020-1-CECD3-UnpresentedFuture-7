@@ -5,7 +5,6 @@ using UnityEngine;
 public class life_point : MonoBehaviour
 {
     private GameObject[] hearts;
-    private API api;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,14 +59,5 @@ public class life_point : MonoBehaviour
             hearts[3].SetActive(true);
             hearts[4].SetActive(true);
         }
-    }
-
-    public void GetUser()
-    {
-
-        Debug.Log("asd");
-        User user = api.getUserById(4);
-        print("NAME: " + user.userName + "SCORE: " + user.score + "ID: " + user.id);
-        print("nono");
     }
 }

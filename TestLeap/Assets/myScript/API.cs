@@ -24,24 +24,12 @@ public class API : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        // Set up the Editor before calling into the realtime database.
-        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://arboxingfb.firebaseio.com/");
-
-        // Get the root reference location of the database.
-        reference = FirebaseDatabase.DefaultInstance.RootReference;
-
-        //User temp = getUserById(4);
-        //print("NAME: " + temp.userName + "SCORE: " + temp.score + "ID: " + temp.id);
+        Reset();
     }
 
     public DatabaseReference reference { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    void Reset()
+    public void Reset()
     {
         Debug.Log("EXcute reset!");
         // Set up the Editor before calling into the realtime database.
@@ -50,7 +38,7 @@ public class API : MonoBehaviour
         // Get the root reference location of the database.
         reference = FirebaseDatabase.DefaultInstance.RootReference;
     }
-    public void addNewUser(string userName, double score, double id)
+    public void addNewUser(string userName, int score, int id)
     {
         print("addUser!");
 
@@ -86,7 +74,7 @@ public class API : MonoBehaviour
                     User MyUser = new User();
                     IDictionary user = (IDictionary)data.Value;
                     //Debug.Log("NAME: " + user["userName"] + "SCORE: " + user["score"] + "ID: " + user["id"]);
-                    print("NAME: " + user["userName"] + "SCORE: " + user["score"] + "ID: " + user["id"] + "DATE: " + user["dateString"]);
+                    print("NAME: " + user["userName"] + "\tSCORE: " + user["score"] + "\tID: " + user["id"] + "\tDATE: " + user["dateString"]);
 
                     string name = "" + user["userName"];
 
@@ -148,27 +136,72 @@ public class API : MonoBehaviour
 
         return MyUser;
     }
+
+    //score점수로 정렬 출력 : YGC
+    public void getUserByScore(UnityAction<User[]> callback)
+    {
+        print("these are sorted datas by score");
+
+        FirebaseDatabase.DefaultInstance.GetReference("Users")
+            .OrderByChild("scoreForSort").GetValueAsync().ContinueWith(task =>
+        {
+            List<User> users = new List<User>();
+            if (task.IsCompleted)
+            {
+                DataSnapshot snapShot = task.Result;
+                
+                print("the number of count is " + snapShot.ChildrenCount);
+
+                foreach (DataSnapshot data in snapShot.Children)
+                {
+                    User MyUser = new User();
+                    IDictionary user = (IDictionary)data.Value;
+                    //Debug.Log("NAME: " + user["userName"] + "SCORE: " + user["score"] + "ID: " + user["id"]);
+                    print("NAME: " + user["userName"] + "\tSCORE: " + user["score"] + "\tID: " + user["id"] + "\tDATE: " + user["dateString"]);
+
+                    string name = "" + user["userName"];
+
+                    MyUser.userName = "" + user["userName"];
+                    MyUser.score = Convert.ToInt32("" + user["score"]);
+                    MyUser.id = Convert.ToInt32("" + user["id"]);
+                    MyUser.dateString = "" + user["dateString"];
+
+                    users.Add(MyUser);
+                }
+                callback.Invoke(users.ToArray());
+            }
+            else
+            {
+                Debug.Log("false");
+                print("false");
+            }
+        });
+    }
 }
+
 [Serializable]
 public class User
 {
     public string userName;
-    public double score;
-    public double id;
+    public int score;
+    public int scoreForSort;
+    public int id;
     public string dateString;
 
     public User()
     {
         this.userName = "NoName";
         this.score = 0;
+        this.scoreForSort = 0;
         this.id = 0;
         this.dateString = "2020-11-16 12:00:00";
     }
 
-    public User(string userName, double score, double id, string dateString)
+    public User(string userName, int score, int id, string dateString)
     {
         this.userName = userName;
         this.score = score;
+        this.scoreForSort = 0 - score;
         this.id = id;
         this.dateString = dateString;
     }
