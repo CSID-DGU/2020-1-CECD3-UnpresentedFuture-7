@@ -1208,7 +1208,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074866188}
-  - component: {fileID: 1074866187}
   - component: {fileID: 1074866186}
   - component: {fileID: 1074866185}
   m_Layer: 0
@@ -1231,12 +1230,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fire: 0
+  fire2: 0
+  reset: 0
+  dataAdd: 0
   data: {fileID: 1074866186}
   Todo:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1074866187}
-        m_MethodName: GetUser
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1274,12 +1276,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  username1: {fileID: 2055243513}
-  username2: {fileID: 1502062483}
-  username3: {fileID: 1749362020}
-  userScore1: {fileID: 1096165406}
-  userScore2: {fileID: 1811069300}
-  userScore3: {fileID: 1578185709}
+  rankNum: 3
+  userNick:
+  - {fileID: 2055243513}
+  - {fileID: 1502062483}
+  - {fileID: 1749362020}
+  userScore:
+  - {fileID: 1096165406}
+  - {fileID: 1811069300}
+  - {fileID: 1578185709}
 --- !u!114 &1074866186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,19 +1297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06c8176fa64c534ebcdbf60e3134128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1074866187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074866184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b3f43bc32ac2543814ff3f421abd6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  api: {fileID: 1074866186}
 --- !u!4 &1074866188
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,7 +1523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 54
+  m_Text: 
 --- !u!222 &1096165407
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2359,7 +2351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB9AC\uC724\uC6B0"
+  m_Text: 
 --- !u!222 &1502062484
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2608,7 +2600,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 28
+  m_Text: 
 --- !u!222 &1578185710
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3116,7 +3108,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC774\uD604\uC7AC"
+  m_Text: 
 --- !u!222 &1749362021
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3234,7 +3226,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 54
+  m_Text: 
 --- !u!222 &1811069301
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3311,7 +3303,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC81C\uC784\uC2A4"
+  m_Text: 
 --- !u!222 &2055243514
 CanvasRenderer:
   m_ObjectHideFlags: 0
