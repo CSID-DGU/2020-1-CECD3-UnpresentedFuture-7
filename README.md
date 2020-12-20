@@ -23,7 +23,6 @@
 
 ```
 git clone <https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7.git
-
 ```
 
 1. Install required packages
@@ -45,7 +44,6 @@ title |  Iamge | Description
  게임 난이도 설정 | ![사진](https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7/blob/master/Project%20Img/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-12-20%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.27.20.png?raw=true) | 게임 난이도 화면
  게임 플레이화면 | ![사진](https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7/blob/master/Project%20Img/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-12-20%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.27.55.png?raw=true) | 게임 전방 화면
  게임 플레이화면 | ![사진](https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7/blob/master/Project%20Img/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-12-20%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.29.18.png?raw=true) | 게임 진행중 화면
- 게임 플레이화면 | ![사진](https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7/blob/master/Project%20Img/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-12-20%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.29.29.png?raw=true) | 게임 진행중 화면
  게임 오버 화면 | ![사진](https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7/blob/master/Project%20Img/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-12-20%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.29.29.png?raw=true) | 게임 오버 화면
  게임 랭킹 화면 | ![사진](https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7/blob/master/Project%20Img/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-12-20%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.29.42.png?raw=true) | 게임 난이도 화면
 
