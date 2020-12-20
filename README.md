@@ -25,14 +25,14 @@
 git clone <https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7.git
 ```
 
-1. Install required packages
+2. Install required packages
 
 Leap Motion, Firebase Database SDK, Tensorflow, ML Agent..
 
 - Unity can download [here](https://unity3d.com/kr/get-unity/download)
 - Firebase SDK can download [here](https://firebase.google.com/?hl=ko)
 - MLAgent can download [here](https://drive.google.com/file/d/1GTOi52gW7_3QxeoTwWI33EacwGto112D/view?usp=sharing)
-1. Run Unity
+3. Run Unity
 
 connect your mobile device(it's cpu should be under than 810, 815) with Leap Motion.
 after get sign that connect device with leap motion as well, you can play it!
