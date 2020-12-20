@@ -1,7 +1,7 @@
 # 2020-1-CECD3-UnpresentedFuture-7
 
 ### 2020 컴퓨터 종합설계 프로젝트
-- R과 LeapMotion을 사용한 boxing game 개발
+- AR과 LeapMotion을 사용한 boxing game 개발
 
 ## 개요
 - 사용자 손 입력 장치와 AR 결합으로 몰입감 있는 운동 환경을 제공하며,    
