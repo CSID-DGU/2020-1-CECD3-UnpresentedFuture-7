@@ -41,9 +41,9 @@ after get sign that connect device with leap motion as well, you can play it!
 ## Game Play Images
 
 
-Title      |     Image    |    Descirption    |
-:-------- :|:------------:|:------------------|
-게임 시작     |             | 게임 시작화면         |
+Title      |     Image    |    Descirption
+:---------:|:------------:|:-----------------:|
+게임 시작     |             | 게임 시작화면         
 
 
 
