@@ -41,7 +41,7 @@ after get sign that connect device with leap motion as well, you can play it!
 ## 사용 방법
 title |  Iamge | Description 
 :----:|:---------:|:------:|
- 제목 | ![스크린샷 2020-11-18 오후 4.38.13](./Project Img/스크린샷 2020-11-18 오후 4.38.13.png) | 설명
+ 제목 | ![스크린샷](https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7/blob/master/Project%20Img/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202020-11-18%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%204.38.13.png?raw=true) | 설명
 
 
 ## 팀원
