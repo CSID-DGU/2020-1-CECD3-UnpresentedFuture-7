@@ -41,7 +41,7 @@ after get sign that connect device with leap motion as well, you can play it!
 ## 사용 방법
 title |  Iamge | Description 
 :----:|:---------:|:------:|
- 제목 | /Project Img/스크린샷 2020-11-18 오후 4.38.13.png | 설명
+ 제목 | (/Project Img/스크린샷 2020-11-18 오후 4.38.13.png) | 설명
 
 
 ## 팀원
