@@ -16,5 +16,36 @@
 - 팀원) 임성두
 - 팀원) 이현재
 
+## Usage
+
+### installation
+
+1. Clone git repository.
+
+```swift
+git clone <https://github.com/CSID-DGU/2020-1-CECD3-UnpresentedFuture-7.git
+```
+
+2. Install required packages
+
+Leap Motion, Firebase Database SDK, Tensorflow, ML Agent..
+
+- Unity can download [here](https://unity3d.com/kr/get-unity/download)
+- Firebase SDK can download [here](https://firebase.google.com/?hl=ko)
+
+3. Run Unity
+
+connect your mobile device(it's cpu should be under than 810, 815) with Leap Motion. 
+after get sign that connect device with leap motion as well, you can play it!
+
+## Game Play Images
+
+
+Title      |     Image    |    Descirption    |
+:-------- :|:------------:|:------------------|
+게임 시작     |             | 게임 시작화면         |
+
+
+
 ## 문의
 임성두 : [sungdoolim@naver.com](mailto:sungdoolim@naver.com)
